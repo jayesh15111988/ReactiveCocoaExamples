@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *combineButton;
 @property (weak, nonatomic) IBOutlet UIButton *flattenMapButton;
 @property (weak, nonatomic) IBOutlet UIButton *relationships;
+@property (weak, nonatomic) IBOutlet UIButton *defActionsheetButton;
+
 
 @end
 
@@ -217,6 +219,30 @@
         [self simulateRelationships];
         return [RACSignal empty];
     }];
+    
+    
+    self.defActionsheetButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        //This is to show action sheet with defer in it
+        [self showActionSheet];
+        return [RACSignal empty];
+    }];
+}
+
+-(void)showActionSheet {
+    [[RACSignal defer:^RACSignal *{
+        UIActionSheet* sheet = [UIActionSheet new];
+        [sheet addButtonWithTitle:@"asdas"];
+        [sheet addButtonWithTitle:@"asda"];
+        [sheet addButtonWithTitle:@"adasd"];
+        sheet.destructiveButtonIndex = 2;
+        [sheet showInView:self.view];
+        return [sheet.rac_buttonClickedSignal filter:^BOOL(id value) {
+            return ([value integerValue] == sheet.destructiveButtonIndex);
+        }];
+    }] subscribeNext:^(id x) {
+        NSLog(@"Value if this %@",x);
+    }];
 }
 
 -(void)simulateRelationships {
@@ -254,6 +280,25 @@
     
     [connection.signal subscribeNext:^(id x) {
         NSLog(@"More Complex, second block executed with data %@",x);
+    }];
+    
+    RACSignal* samplePauseSignl = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"jayesh"];
+        return nil;
+    }];
+    
+    //Add Delay before sending RACSignal back
+    RACSignal* pauseSig = [samplePauseSignl flattenMap:^id(NSString* returnedValue) {
+        RACSignal *pauseSignal = [RACSignal return:@(returnedValue.length > 0)];
+        if (pause) {
+            return [pauseSignal delay:2.5];
+        } else {
+            return pauseSignal;
+        }
+    }];
+    
+    [pauseSig subscribeNext:^(id x) {
+        NSLog(@"Value received from pause signal %@",x);
     }];
 }
 
