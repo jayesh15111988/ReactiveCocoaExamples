@@ -1,0 +1,21 @@
+//
+//  JKReactiveDemos-Prefix.pch
+//  JKReactiveDemos
+//
+//  Created by Jayesh Kawli Backup on 2/1/15.
+//  Copyright (c) 2015 Jayesh Kawli Backup. All rights reserved.
+//
+
+#ifndef JKReactiveDemos_JKReactiveDemos_Prefix_pch
+#define JKReactiveDemos_JKReactiveDemos_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+
+#import <AFNetworking-RACExtensions/AFHTTPRequestOperationManager+RACSupport.h>
+#define BASE_URL @"https://api.flightstats.com/"
+#define API_EXTENSION @"flex/"
+#define APP_ID @"9738bcd8"
+#define APP_KEY @"6c713890a9bf2822f783ab8870332617"
