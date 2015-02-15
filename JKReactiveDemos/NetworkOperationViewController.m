@@ -33,12 +33,9 @@
         NSArray* collectionOfAirlines = tuple[1][@"airlines"];
         RACSignal* signalWithAirlinesCollection = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             [subscriber sendNext:collectionOfAirlines];
-//            [subscriber sendError:[[NSError alloc] initWithDomain:@"Reactive Cocoa Demo" code:100 userInfo:@{NSLocalizedDescriptionKey : @"Unknown Error Occurred"}]];
             [subscriber sendCompleted];
-        
             return nil;
         }];
-        
         
         RACSignal* signalWithModelsConversion = [self convertdictionaryToModels:signalWithAirlinesCollection];
         

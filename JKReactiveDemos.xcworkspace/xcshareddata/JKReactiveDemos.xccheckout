@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>08182B90-FE6C-45A6-B829-9FFB807E28CF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JKReactiveDemos</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C6E14EEBFBA06B7DBA9E94F6928DD93A9B642A02</key>
+		<string>github.com:jayesh15111988/ReactiveCocoaExamples.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JKReactiveDemos.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C6E14EEBFBA06B7DBA9E94F6928DD93A9B642A02</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:jayesh15111988/ReactiveCocoaExamples.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C6E14EEBFBA06B7DBA9E94F6928DD93A9B642A02</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C6E14EEBFBA06B7DBA9E94F6928DD93A9B642A02</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JKReactiveDemos</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -13,6 +13,7 @@
 		3805EB641A7EE7A300F3D1E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3805EB631A7EE7A300F3D1E4 /* Images.xcassets */; };
 		3805EB671A7EE7A300F3D1E4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3805EB651A7EE7A300F3D1E4 /* LaunchScreen.xib */; };
 		3805EB731A7EE7A300F3D1E4 /* JKReactiveDemosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805EB721A7EE7A300F3D1E4 /* JKReactiveDemosTests.m */; };
+		380F7DA01A914DA90089DAA0 /* JKReactiveDemosLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380F7D9F1A914DA90089DAA0 /* JKReactiveDemosLandingViewController.m */; };
 		382435AE1A8082BD009EB87A /* ImageUpdateDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 382435AD1A8082BD009EB87A /* ImageUpdateDemoViewController.m */; };
 		3824E8361A7EE93500362AC3 /* DemoHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824E8351A7EE93500362AC3 /* DemoHomePageViewController.m */; };
 		3824E8391A7EEAC300362AC3 /* InputValidationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824E8381A7EEAC300362AC3 /* InputValidationViewController.m */; };
@@ -49,6 +50,8 @@
 		3805EB6C1A7EE7A300F3D1E4 /* JKReactiveDemosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKReactiveDemosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3805EB711A7EE7A300F3D1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3805EB721A7EE7A300F3D1E4 /* JKReactiveDemosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKReactiveDemosTests.m; sourceTree = "<group>"; };
+		380F7D9E1A914DA90089DAA0 /* JKReactiveDemosLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKReactiveDemosLandingViewController.h; sourceTree = "<group>"; };
+		380F7D9F1A914DA90089DAA0 /* JKReactiveDemosLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactiveDemosLandingViewController.m; sourceTree = "<group>"; };
 		382435AC1A8082BD009EB87A /* ImageUpdateDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUpdateDemoViewController.h; sourceTree = "<group>"; };
 		382435AD1A8082BD009EB87A /* ImageUpdateDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUpdateDemoViewController.m; sourceTree = "<group>"; };
 		3824E8341A7EE93500362AC3 /* DemoHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoHomePageViewController.h; sourceTree = "<group>"; };
@@ -118,7 +121,7 @@
 			children = (
 				38D978781A86ACF5004CC6C5 /* images */,
 				3824E83E1A7EFA8100362AC3 /* Model */,
-				3824E8331A7EE91B00362AC3 /* View Controllers */,
+				3824E8331A7EE91B00362AC3 /* Controllers */,
 				3805EB5A1A7EE7A300F3D1E4 /* AppDelegate.h */,
 				3805EB5B1A7EE7A300F3D1E4 /* AppDelegate.m */,
 				3805EB601A7EE7A300F3D1E4 /* Main.storyboard */,
@@ -156,7 +159,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3824E8331A7EE91B00362AC3 /* View Controllers */ = {
+		3824E8331A7EE91B00362AC3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				3824E8341A7EE93500362AC3 /* DemoHomePageViewController.h */,
@@ -171,8 +174,10 @@
 				38D9786D1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m */,
 				38D978751A86AA0D004CC6C5 /* PullToRefreshTableViewController.h */,
 				38D978761A86AA0D004CC6C5 /* PullToRefreshTableViewController.m */,
+				380F7D9E1A914DA90089DAA0 /* JKReactiveDemosLandingViewController.h */,
+				380F7D9F1A914DA90089DAA0 /* JKReactiveDemosLandingViewController.m */,
 			);
-			name = "View Controllers";
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		3824E83E1A7EFA8100362AC3 /* Model */ = {
@@ -357,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3824E8411A7EFA9200362AC3 /* Airline.m in Sources */,
+				380F7DA01A914DA90089DAA0 /* JKReactiveDemosLandingViewController.m in Sources */,
 				38D978741A869A02004CC6C5 /* UISearchDisplayController+RAC.m in Sources */,
 				3824E8391A7EEAC300362AC3 /* InputValidationViewController.m in Sources */,
 				3805EB5C1A7EE7A300F3D1E4 /* AppDelegate.m in Sources */,

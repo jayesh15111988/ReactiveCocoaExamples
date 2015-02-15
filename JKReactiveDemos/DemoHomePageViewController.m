@@ -224,13 +224,14 @@
     self.defActionsheetButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
         //This is to show action sheet with defer in it
+        //We won't need subscriber in this case to put when creating a new signal
         [self showActionSheet];
         return [RACSignal empty];
     }];
 }
 
 -(void)showActionSheet {
-    [[RACSignal defer:^RACSignal *{
+    RACSignal* deferSignal = [RACSignal defer:^RACSignal *{
         UIActionSheet* sheet = [UIActionSheet new];
         [sheet addButtonWithTitle:@"asdas"];
         [sheet addButtonWithTitle:@"asda"];
@@ -240,8 +241,10 @@
         return [sheet.rac_buttonClickedSignal filter:^BOOL(id value) {
             return ([value integerValue] == sheet.destructiveButtonIndex);
         }];
-    }] subscribeNext:^(id x) {
-        NSLog(@"Value if this %@",x);
+    }];
+    
+    [deferSignal subscribeNext:^(id x) {
+        NSLog(@"Value received is %@",x);
     }];
 }
 
