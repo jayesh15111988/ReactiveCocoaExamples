@@ -259,13 +259,19 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sqo-eO-EwR" id="jly-DZ-Gm1">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="13" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reactive Demo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcN-Bs-rQo">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="13" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reactive Demo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcN-Bs-rQo">
                                                     <rect key="frame" x="5" y="5" width="270" height="54"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RcN-Bs-rQo" secondAttribute="trailing" constant="4" id="ClQ-Fw-jQA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="RcN-Bs-rQo" secondAttribute="bottom" constant="-3.5" id="I0V-AR-I1J"/>
+                                                <constraint firstItem="RcN-Bs-rQo" firstAttribute="top" secondItem="jly-DZ-Gm1" secondAttribute="topMargin" constant="-3" id="Qp8-fG-uVt"/>
+                                                <constraint firstItem="RcN-Bs-rQo" firstAttribute="leading" secondItem="jly-DZ-Gm1" secondAttribute="leadingMargin" constant="-3" id="huy-3U-hVG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>

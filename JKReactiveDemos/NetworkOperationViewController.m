@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Twenty Second Demo
     self.manager = [[AFHTTPRequestOperationManager alloc]
                     initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASE_URL, API_EXTENSION]]];
     self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -61,8 +62,9 @@
     }];
     
     
-    temp = @"Ractive cocoa is straightforward";
+    temp = @"ReactiveCocoa is straightforward";
     
+    //Twenty third demo
     [[self.networkOpearationButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
     }];
     

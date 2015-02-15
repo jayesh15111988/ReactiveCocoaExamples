@@ -33,10 +33,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //First Demo
     RAC(self, isEnabled) = [RACObserve(self, inputText) map:^(UITextField* value) {
         return @([value.text length] > 1);
     }];
     
+    //Second Demo
     RACSignal *validSalarySignal = [[self.inputText rac_textSignal] map:^id(NSString* value) {
         return value;
     }];
@@ -45,12 +48,13 @@
         NSLog(@"Value entered %@",inputValue);
     }];
 
-    
-    //Dynamically bind testfield value to the RAC Signal
+    //Third Demo
+    //Dynamically bind textfield value to the RAC Signal
     RAC(self, testString) = [[self.inputText rac_textSignal] map:^id(NSString* value) {
         return value;
     }];
     
+    //Fourth Demo
     RACSignal* signalForSearchField = [[[self.searchInputBox rac_textSignal] throttle:THROTTLE_TIMEOUT] skip:1];
 
     [signalForSearchField subscribeNext:^(NSString* searchString) {
@@ -59,7 +63,7 @@
     
     
     //Backgorund operation for heavy outputs such as an image data
-    
+    //Fifth Demo
     self.enableButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         
         //Get the image and draw it on imageView
@@ -75,16 +79,15 @@
     
     
     //Combine Latest Signals
+    //Sixth Demo
     RACSignal* combinedSignal = [RACSignal combineLatest:@[[self firstRACSignal], [self secondRACSignal]]];
-    
-    
     [combinedSignal subscribeNext:^(RACTuple* tuple) {
         NSLog(@"Subscription successful with tuple %@ and tuple length %ld",tuple, tuple.count);
     }];
     
-   
     
     //Combine With map
+    //Seventh Demo
     RACSignal* combineLatestWithReduce = [RACSignal combineLatest:@[[self firstRACSignal], [self secondRACSignal]] reduce:^id(NSString* firstStringOutput, NSString* secondStringOutput){
         return [firstStringOutput stringByAppendingString:secondStringOutput];
     }];
@@ -94,7 +97,9 @@
         NSLog(@"Concatenated String is %@",concatString);
     }];
     
+    
     //Just another way to observe the value entered in UITextField
+    //Eigth Demo
     [[RACObserve(self, inputText.text) filter:^BOOL(NSString* value) {
         return value.length > 0;
     }] subscribeNext:^(NSString *currentValue) {
@@ -102,6 +107,7 @@
     }];
     
     //Connecting button to RAC Signals
+    //Ninth Demo
     RACCommand* command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         return [self firstRACSignal];
     }];
@@ -119,6 +125,7 @@
     
     
     //String array example
+    //Tenth Demo
     NSArray* stringArray = @[@"jayesh",@"kawli",@"mira",@"anagha"];
     NSArray* filteredArray = [[stringArray.rac_sequence filter:^BOOL(NSString* value) {
         return (value.length > 4);
@@ -127,6 +134,7 @@
     }].array;
     NSLog(@"Filetred Array %@",filteredArray);
 
+    //Eleventh Demo
     self.progressButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(UIButton* input) {
         
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -160,6 +168,7 @@
     }];
     
     //More Complex Example
+    //Twelvth Demo
     RACSignal* complexSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@"Jayesh"];
         [subscriber sendCompleted];
@@ -175,6 +184,7 @@
         NSLog(@"First Name Block Completed");
     }];
     
+    //Thirteenth Demo
     RACSubject* letters = [RACSubject subject];
     RACSignal* lettersSignal = letters;
     
@@ -193,6 +203,7 @@
     [letters sendNext:@"iOS"];
     [letters sendNext:@"Objective-C"];
     
+    //Fourteenth demo
     @weakify(self);
     self.timeoutButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self)
@@ -200,27 +211,31 @@
         return [RACSignal empty];
     }];
     
+    
     //More and More complex example
     //How to use combineLatest in Reactive Way
+    //Fiftinth Demo
     self.combineButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
         [self simulateCombineAndReduce];
         return [RACSignal empty];
     }];
     
+    //Sixteenth Demo
     self.flattenMapButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
         [self simulateFlattenMap];
         return [RACSignal empty];
     }];
     
+    //Seventeenth and Eigtheenth and Nineteenth Demo
     self.relationships.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
         [self simulateRelationships];
         return [RACSignal empty];
     }];
     
-    
+    //Twentieth Demo
     self.defActionsheetButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
         //This is to show action sheet with defer in it
@@ -230,6 +245,7 @@
     }];
 }
 
+//Twentieth Demo
 -(void)showActionSheet {
     RACSignal* deferSignal = [RACSignal defer:^RACSignal *{
         UIActionSheet* sheet = [UIActionSheet new];

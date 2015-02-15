@@ -26,6 +26,7 @@
     [super viewDidLoad];
     
     //You can always call subscribe** methods on Reactive Cocoa for right hand side, as it returns the RACSignal back
+    //Twenty Fourth Demo
     RAC(self, firstImageView.image) = RACObserve(self, firstImage);
     RAC(self, secondImageView.image) = RACObserve(self, secondImage);
     
@@ -69,8 +70,6 @@
             self.secondImageView.image = secondImage;
         }];
         
-
-        
         [secondSignal subscribeCompleted:^{
             NSLog(@"Second Image loaded successfully");
         }];
@@ -88,6 +87,8 @@
     return [RACSignal empty];
     }];
     
+    
+    //Twenty fifth and sixth demo
     [executingCommand.executing subscribeNext:^(id x) {
         [self.activityIndicator startAnimating];
         NSLog(@"Executing");

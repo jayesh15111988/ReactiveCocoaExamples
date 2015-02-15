@@ -49,6 +49,7 @@
     [super viewDidLoad];
     self.currentSeconds = 0;
     [self setupTimer];
+    //Twenty Seventh demo
     [self setupLatestSignalWithSearchbar];
 }
 
