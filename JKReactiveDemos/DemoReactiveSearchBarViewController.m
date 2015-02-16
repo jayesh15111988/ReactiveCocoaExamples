@@ -22,6 +22,7 @@
 @implementation DemoReactiveSearchBarViewController
 
 -(instancetype)init {
+
     if(self = [super init]) {
         //Different way to observe value of string based on the input of search string in searchbar
         RAC(self, searchString) =  [[self.searchBar rac_textSignal] map:^id(NSString* value) {

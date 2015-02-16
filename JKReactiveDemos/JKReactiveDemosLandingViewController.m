@@ -8,6 +8,7 @@
 
 #import "JKReactiveDemosLandingViewController.h"
 #import "JKReactiveTextFieldsDemoViewController.h"
+#import "JKReactiveSearchThrottleViewController.h"
 
 @interface JKReactiveDemosLandingViewController ()
 @property (strong, nonatomic) IBOutlet UIView *footerView;
@@ -46,6 +47,9 @@
         reactiveTextFieldsViewController.textFieldDemoTypeSelected = indexPath.row;
         reactiveTextFieldsViewController.selectedDemoName = selectedDemo;
         [self.navigationController pushViewController:reactiveTextFieldsViewController animated:YES];
+    } else if (indexPath.row == 3) {
+        JKReactiveSearchThrottleViewController* searchBarController = (JKReactiveSearchThrottleViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"searchthrottle"];
+        [self.navigationController pushViewController:searchBarController animated:YES];
     }
 }
 

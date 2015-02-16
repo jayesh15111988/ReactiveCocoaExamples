@@ -52,9 +52,5 @@
     }
     self.extraInstructionsLabel.text = instructionScreen;
 }
-- (IBAction)butPressed:(id)sender {
-    NSLog(@"%@ Value Entered is", self.inputTextValue);
-    self.inputTextField.text = @"Valueee";
-}
 
 @end

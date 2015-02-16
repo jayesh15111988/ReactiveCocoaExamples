@@ -16,6 +16,7 @@
 		380F7DA01A914DA90089DAA0 /* JKReactiveDemosLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380F7D9F1A914DA90089DAA0 /* JKReactiveDemosLandingViewController.m */; };
 		380F7DA41A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380F7DA31A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.m */; };
 		380F7DA61A916E820089DAA0 /* DemoScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380F7DA51A916E820089DAA0 /* DemoScreens.storyboard */; };
+		380F7DA91A91810C0089DAA0 /* JKReactiveSearchThrottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380F7DA81A91810C0089DAA0 /* JKReactiveSearchThrottleViewController.m */; };
 		382435AE1A8082BD009EB87A /* ImageUpdateDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 382435AD1A8082BD009EB87A /* ImageUpdateDemoViewController.m */; };
 		3824E8361A7EE93500362AC3 /* DemoHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824E8351A7EE93500362AC3 /* DemoHomePageViewController.m */; };
 		3824E8391A7EEAC300362AC3 /* InputValidationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824E8381A7EEAC300362AC3 /* InputValidationViewController.m */; };
@@ -56,6 +57,8 @@
 		380F7DA21A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKReactiveTextFieldsDemoViewController.h; sourceTree = "<group>"; };
 		380F7DA31A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactiveTextFieldsDemoViewController.m; sourceTree = "<group>"; };
 		380F7DA51A916E820089DAA0 /* DemoScreens.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DemoScreens.storyboard; path = ../DemoScreens.storyboard; sourceTree = "<group>"; };
+		380F7DA71A91810C0089DAA0 /* JKReactiveSearchThrottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKReactiveSearchThrottleViewController.h; sourceTree = "<group>"; };
+		380F7DA81A91810C0089DAA0 /* JKReactiveSearchThrottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactiveSearchThrottleViewController.m; sourceTree = "<group>"; };
 		382435AC1A8082BD009EB87A /* ImageUpdateDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUpdateDemoViewController.h; sourceTree = "<group>"; };
 		382435AD1A8082BD009EB87A /* ImageUpdateDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUpdateDemoViewController.m; sourceTree = "<group>"; };
 		3824E8341A7EE93500362AC3 /* DemoHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoHomePageViewController.h; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 			children = (
 				380F7DA21A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.h */,
 				380F7DA31A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.m */,
+				380F7DA71A91810C0089DAA0 /* JKReactiveSearchThrottleViewController.h */,
+				380F7DA81A91810C0089DAA0 /* JKReactiveSearchThrottleViewController.m */,
 			);
 			name = "Demo Controllers";
 			path = ..;
@@ -380,6 +385,7 @@
 				3824E8391A7EEAC300362AC3 /* InputValidationViewController.m in Sources */,
 				3805EB5C1A7EE7A300F3D1E4 /* AppDelegate.m in Sources */,
 				3824E8361A7EE93500362AC3 /* DemoHomePageViewController.m in Sources */,
+				380F7DA91A91810C0089DAA0 /* JKReactiveSearchThrottleViewController.m in Sources */,
 				3824E83D1A7EF25700362AC3 /* NetworkOperationViewController.m in Sources */,
 				380F7DA41A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.m in Sources */,
 				382435AE1A8082BD009EB87A /* ImageUpdateDemoViewController.m in Sources */,
