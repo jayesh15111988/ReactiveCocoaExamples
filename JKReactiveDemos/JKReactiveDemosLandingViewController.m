@@ -9,6 +9,7 @@
 #import "JKReactiveDemosLandingViewController.h"
 #import "JKReactiveTextFieldsDemoViewController.h"
 #import "JKReactiveSearchThrottleViewController.h"
+#import "JKReactiveDownloadOperationViewController.h"
 
 @interface JKReactiveDemosLandingViewController ()
 @property (strong, nonatomic) IBOutlet UIView *footerView;
@@ -50,6 +51,9 @@
     } else if (indexPath.row == 3) {
         JKReactiveSearchThrottleViewController* searchBarController = (JKReactiveSearchThrottleViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"searchthrottle"];
         [self.navigationController pushViewController:searchBarController animated:YES];
+    } else if (indexPath.row ==4) {
+        JKReactiveDownloadOperationViewController* downloadOperationViewController = (JKReactiveDownloadOperationViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"downloadoperation"];
+        [self.navigationController pushViewController:downloadOperationViewController animated:YES];
     }
 }
 
