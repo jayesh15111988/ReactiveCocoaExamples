@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reactive Text Fields Demo View Controller-->
+        <scene sceneID="4b2-4I-oPm">
+            <objects>
+                <viewController storyboardIdentifier="textfields" id="luv-Ry-f5a" customClass="JKReactiveTextFieldsDemoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Yv-t3-jKM"/>
+                        <viewControllerLayoutGuide type="bottom" id="oaz-a4-f40"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WmC-tz-MUX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kv1-Ub-qCD">
+                                <rect key="frame" x="40" y="71" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="odl-wd-oCO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please input value in the text field. We will update it accordingly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="nJu-bE-51z">
+                                <rect key="frame" x="40" y="121" width="240" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.93710191730000003" blue="0.82475943519999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3Il-kc-MnL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="TZe-3K-VYC">
+                                <rect key="frame" x="40" y="20" width="240" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JLx-N0-at4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kv1-Ub-qCD" firstAttribute="leading" secondItem="nJu-bE-51z" secondAttribute="leading" id="0bf-In-oZs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kv1-Ub-qCD" secondAttribute="trailing" constant="24" id="6kV-8D-9Z8"/>
+                            <constraint firstItem="Kv1-Ub-qCD" firstAttribute="trailing" secondItem="nJu-bE-51z" secondAttribute="trailing" id="9qm-H8-9de"/>
+                            <constraint firstAttribute="centerX" secondItem="Kv1-Ub-qCD" secondAttribute="centerX" id="CEZ-Z1-ohR"/>
+                            <constraint firstItem="Kv1-Ub-qCD" firstAttribute="leading" secondItem="TZe-3K-VYC" secondAttribute="leading" id="RCL-2l-Ylq"/>
+                            <constraint firstItem="Kv1-Ub-qCD" firstAttribute="trailing" secondItem="TZe-3K-VYC" secondAttribute="trailing" id="bXe-ML-9pL"/>
+                            <constraint firstItem="TZe-3K-VYC" firstAttribute="top" secondItem="7Yv-t3-jKM" secondAttribute="bottom" constant="20" id="d1V-XR-ePW"/>
+                            <constraint firstItem="Kv1-Ub-qCD" firstAttribute="top" secondItem="TZe-3K-VYC" secondAttribute="bottom" constant="11" id="dKe-F4-Pim"/>
+                            <constraint firstItem="Kv1-Ub-qCD" firstAttribute="leading" secondItem="WmC-tz-MUX" secondAttribute="leadingMargin" constant="24" id="sDa-Fc-mcU"/>
+                            <constraint firstItem="nJu-bE-51z" firstAttribute="top" secondItem="Kv1-Ub-qCD" secondAttribute="bottom" constant="20" id="xrb-Rw-F9R"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="currentDemoName" destination="TZe-3K-VYC" id="F8G-d9-teA"/>
+                        <outlet property="extraInstructionsLabel" destination="nJu-bE-51z" id="Uog-ti-XQB"/>
+                        <outlet property="inputTextField" destination="Kv1-Ub-qCD" id="d8Z-RK-yAL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QdV-16-xo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="-66"/>
+        </scene>
+    </scenes>
+</document>

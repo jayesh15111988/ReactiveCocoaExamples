@@ -14,6 +14,8 @@
 		3805EB671A7EE7A300F3D1E4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3805EB651A7EE7A300F3D1E4 /* LaunchScreen.xib */; };
 		3805EB731A7EE7A300F3D1E4 /* JKReactiveDemosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805EB721A7EE7A300F3D1E4 /* JKReactiveDemosTests.m */; };
 		380F7DA01A914DA90089DAA0 /* JKReactiveDemosLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380F7D9F1A914DA90089DAA0 /* JKReactiveDemosLandingViewController.m */; };
+		380F7DA41A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380F7DA31A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.m */; };
+		380F7DA61A916E820089DAA0 /* DemoScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380F7DA51A916E820089DAA0 /* DemoScreens.storyboard */; };
 		382435AE1A8082BD009EB87A /* ImageUpdateDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 382435AD1A8082BD009EB87A /* ImageUpdateDemoViewController.m */; };
 		3824E8361A7EE93500362AC3 /* DemoHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824E8351A7EE93500362AC3 /* DemoHomePageViewController.m */; };
 		3824E8391A7EEAC300362AC3 /* InputValidationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824E8381A7EEAC300362AC3 /* InputValidationViewController.m */; };
@@ -22,7 +24,6 @@
 		38D9786E1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D9786D1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m */; };
 		38D978731A869A02004CC6C5 /* UISearchBar+RAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D978701A869A02004CC6C5 /* UISearchBar+RAC.m */; };
 		38D978741A869A02004CC6C5 /* UISearchDisplayController+RAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D978721A869A02004CC6C5 /* UISearchDisplayController+RAC.m */; };
-		38D978771A86AA0D004CC6C5 /* PullToRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D978761A86AA0D004CC6C5 /* PullToRefreshTableViewController.m */; };
 		38D9787A1A86AD05004CC6C5 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D978791A86AD04004CC6C5 /* map.png */; };
 		799FAC9A858183EE7D7FD09A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 904982A420BC57EE2EA9FFA9 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,9 @@
 		3805EB721A7EE7A300F3D1E4 /* JKReactiveDemosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKReactiveDemosTests.m; sourceTree = "<group>"; };
 		380F7D9E1A914DA90089DAA0 /* JKReactiveDemosLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKReactiveDemosLandingViewController.h; sourceTree = "<group>"; };
 		380F7D9F1A914DA90089DAA0 /* JKReactiveDemosLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactiveDemosLandingViewController.m; sourceTree = "<group>"; };
+		380F7DA21A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKReactiveTextFieldsDemoViewController.h; sourceTree = "<group>"; };
+		380F7DA31A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactiveTextFieldsDemoViewController.m; sourceTree = "<group>"; };
+		380F7DA51A916E820089DAA0 /* DemoScreens.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DemoScreens.storyboard; path = ../DemoScreens.storyboard; sourceTree = "<group>"; };
 		382435AC1A8082BD009EB87A /* ImageUpdateDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUpdateDemoViewController.h; sourceTree = "<group>"; };
 		382435AD1A8082BD009EB87A /* ImageUpdateDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUpdateDemoViewController.m; sourceTree = "<group>"; };
 		3824E8341A7EE93500362AC3 /* DemoHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoHomePageViewController.h; sourceTree = "<group>"; };
@@ -69,8 +73,6 @@
 		38D978701A869A02004CC6C5 /* UISearchBar+RAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+RAC.m"; sourceTree = "<group>"; };
 		38D978711A869A02004CC6C5 /* UISearchDisplayController+RAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchDisplayController+RAC.h"; sourceTree = "<group>"; };
 		38D978721A869A02004CC6C5 /* UISearchDisplayController+RAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchDisplayController+RAC.m"; sourceTree = "<group>"; };
-		38D978751A86AA0D004CC6C5 /* PullToRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefreshTableViewController.h; sourceTree = "<group>"; };
-		38D978761A86AA0D004CC6C5 /* PullToRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshTableViewController.m; sourceTree = "<group>"; };
 		38D978791A86AD04004CC6C5 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		904982A420BC57EE2EA9FFA9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BD6C8FA6871CDA3364444D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,10 +123,12 @@
 			children = (
 				38D978781A86ACF5004CC6C5 /* images */,
 				3824E83E1A7EFA8100362AC3 /* Model */,
+				380F7DA11A91677B0089DAA0 /* Demo Controllers */,
 				3824E8331A7EE91B00362AC3 /* Controllers */,
 				3805EB5A1A7EE7A300F3D1E4 /* AppDelegate.h */,
 				3805EB5B1A7EE7A300F3D1E4 /* AppDelegate.m */,
 				3805EB601A7EE7A300F3D1E4 /* Main.storyboard */,
+				380F7DA51A916E820089DAA0 /* DemoScreens.storyboard */,
 				3805EB631A7EE7A300F3D1E4 /* Images.xcassets */,
 				3805EB651A7EE7A300F3D1E4 /* LaunchScreen.xib */,
 				3824E83A1A7EEB2B00362AC3 /* JKReactiveDemos-Prefix.pch */,
@@ -159,6 +163,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		380F7DA11A91677B0089DAA0 /* Demo Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				380F7DA21A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.h */,
+				380F7DA31A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.m */,
+			);
+			name = "Demo Controllers";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		3824E8331A7EE91B00362AC3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,8 +186,6 @@
 				382435AD1A8082BD009EB87A /* ImageUpdateDemoViewController.m */,
 				38D9786C1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.h */,
 				38D9786D1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m */,
-				38D978751A86AA0D004CC6C5 /* PullToRefreshTableViewController.h */,
-				38D978761A86AA0D004CC6C5 /* PullToRefreshTableViewController.m */,
 				380F7D9E1A914DA90089DAA0 /* JKReactiveDemosLandingViewController.h */,
 				380F7D9F1A914DA90089DAA0 /* JKReactiveDemosLandingViewController.m */,
 			);
@@ -311,6 +323,7 @@
 				3805EB621A7EE7A300F3D1E4 /* Main.storyboard in Resources */,
 				3805EB671A7EE7A300F3D1E4 /* LaunchScreen.xib in Resources */,
 				3805EB641A7EE7A300F3D1E4 /* Images.xcassets in Resources */,
+				380F7DA61A916E820089DAA0 /* DemoScreens.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,8 +381,8 @@
 				3805EB5C1A7EE7A300F3D1E4 /* AppDelegate.m in Sources */,
 				3824E8361A7EE93500362AC3 /* DemoHomePageViewController.m in Sources */,
 				3824E83D1A7EF25700362AC3 /* NetworkOperationViewController.m in Sources */,
+				380F7DA41A916E550089DAA0 /* JKReactiveTextFieldsDemoViewController.m in Sources */,
 				382435AE1A8082BD009EB87A /* ImageUpdateDemoViewController.m in Sources */,
-				38D978771A86AA0D004CC6C5 /* PullToRefreshTableViewController.m in Sources */,
 				3805EB591A7EE7A300F3D1E4 /* main.m in Sources */,
 				38D9786E1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m in Sources */,
 				38D978731A869A02004CC6C5 /* UISearchBar+RAC.m in Sources */,
