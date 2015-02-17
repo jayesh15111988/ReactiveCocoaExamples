@@ -10,6 +10,7 @@
 #import "JKReactiveTextFieldsDemoViewController.h"
 #import "JKReactiveSearchThrottleViewController.h"
 #import "JKReactiveDownloadOperationViewController.h"
+#import "JKReactiveCombineSignalsViewController.h"
 
 @interface JKReactiveDemosLandingViewController ()
 @property (strong, nonatomic) IBOutlet UIView *footerView;
@@ -54,6 +55,10 @@
     } else if (indexPath.row ==4) {
         JKReactiveDownloadOperationViewController* downloadOperationViewController = (JKReactiveDownloadOperationViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"downloadoperation"];
         [self.navigationController pushViewController:downloadOperationViewController animated:YES];
+    } else if (indexPath.row > 4 && indexPath.row <7) {
+        JKReactiveCombineSignalsViewController* signalsCombineViewController = (JKReactiveCombineSignalsViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"combinesignals"];
+        signalsCombineViewController.demoTypeSelected = indexPath.row;
+        [self.navigationController pushViewController:signalsCombineViewController animated:YES];
     }
 }
 
