@@ -99,7 +99,7 @@
     
     
     //Just another way to observe the value entered in UITextField
-    //Eigth Demo
+    //Eigth Demo - Deprecated redundant and not using in demo screen
     [[RACObserve(self, inputText.text) filter:^BOOL(NSString* value) {
         return value.length > 0;
     }] subscribeNext:^(NSString *currentValue) {
@@ -122,19 +122,8 @@
     }];
     
     self.triggerButton.rac_command = command;
-    
-    
-    //String array example
-    //Tenth Demo
-    NSArray* stringArray = @[@"jayesh",@"kawli",@"mira",@"anagha"];
-    NSArray* filteredArray = [[stringArray.rac_sequence filter:^BOOL(NSString* value) {
-        return (value.length > 4);
-    }] map:^id(NSString* value) {
-        return [value stringByAppendingString:@" Tail Part"];
-    }].array;
-    NSLog(@"Filetred Array %@",filteredArray);
 
-    //Eleventh Demo
+    //Tenth Demo
     self.progressButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(UIButton* input) {
         
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -166,6 +155,16 @@
             NSLog(@"Button sent by the first Signal %@",x);
         }];
     }];
+    
+    //Eleventh Demo
+    NSArray* stringArray = @[@"jayesh",@"kawli",@"mira",@"anagha"];
+    NSArray* filteredArray = [[stringArray.rac_sequence filter:^BOOL(NSString* value) {
+        return (value.length > 4);
+    }] map:^id(NSString* value) {
+        return [value stringByAppendingString:@" Tail Part"];
+    }].array;
+    NSLog(@"Filetred Array %@",filteredArray);
+    
     
     //More Complex Example
     //Twelvth Demo

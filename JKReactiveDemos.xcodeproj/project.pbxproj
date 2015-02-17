@@ -24,6 +24,7 @@
 		3824E83D1A7EF25700362AC3 /* NetworkOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824E83C1A7EF25700362AC3 /* NetworkOperationViewController.m */; };
 		3824E8411A7EFA9200362AC3 /* Airline.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824E8401A7EFA9200362AC3 /* Airline.m */; };
 		38C628141A92C9EB002F9479 /* JKReactiveCombineSignalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C628131A92C9EB002F9479 /* JKReactiveCombineSignalsViewController.m */; };
+		38C628171A92DC0E002F9479 /* JKReactiveButtonActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C628161A92DC0E002F9479 /* JKReactiveButtonActionsViewController.m */; };
 		38D9786E1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D9786D1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m */; };
 		38D978731A869A02004CC6C5 /* UISearchBar+RAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D978701A869A02004CC6C5 /* UISearchBar+RAC.m */; };
 		38D978741A869A02004CC6C5 /* UISearchDisplayController+RAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D978721A869A02004CC6C5 /* UISearchDisplayController+RAC.m */; };
@@ -76,6 +77,8 @@
 		3824E8401A7EFA9200362AC3 /* Airline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Airline.m; sourceTree = "<group>"; };
 		38C628121A92C9EB002F9479 /* JKReactiveCombineSignalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKReactiveCombineSignalsViewController.h; sourceTree = "<group>"; };
 		38C628131A92C9EB002F9479 /* JKReactiveCombineSignalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactiveCombineSignalsViewController.m; sourceTree = "<group>"; };
+		38C628151A92DC0E002F9479 /* JKReactiveButtonActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKReactiveButtonActionsViewController.h; sourceTree = "<group>"; };
+		38C628161A92DC0E002F9479 /* JKReactiveButtonActionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactiveButtonActionsViewController.m; sourceTree = "<group>"; };
 		38D9786C1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoReactiveSearchBarViewController.h; sourceTree = "<group>"; };
 		38D9786D1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoReactiveSearchBarViewController.m; sourceTree = "<group>"; };
 		38D9786F1A869A02004CC6C5 /* UISearchBar+RAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+RAC.h"; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 				380F7DAB1A9186F30089DAA0 /* JKReactiveDownloadOperationViewController.m */,
 				38C628121A92C9EB002F9479 /* JKReactiveCombineSignalsViewController.h */,
 				38C628131A92C9EB002F9479 /* JKReactiveCombineSignalsViewController.m */,
+				38C628151A92DC0E002F9479 /* JKReactiveButtonActionsViewController.h */,
+				38C628161A92DC0E002F9479 /* JKReactiveButtonActionsViewController.m */,
 			);
 			name = "Demo Controllers";
 			path = ..;
@@ -395,6 +400,7 @@
 				38D978741A869A02004CC6C5 /* UISearchDisplayController+RAC.m in Sources */,
 				3824E8391A7EEAC300362AC3 /* InputValidationViewController.m in Sources */,
 				3805EB5C1A7EE7A300F3D1E4 /* AppDelegate.m in Sources */,
+				38C628171A92DC0E002F9479 /* JKReactiveButtonActionsViewController.m in Sources */,
 				3824E8361A7EE93500362AC3 /* DemoHomePageViewController.m in Sources */,
 				380F7DA91A91810C0089DAA0 /* JKReactiveSearchThrottleViewController.m in Sources */,
 				38C628141A92C9EB002F9479 /* JKReactiveCombineSignalsViewController.m in Sources */,

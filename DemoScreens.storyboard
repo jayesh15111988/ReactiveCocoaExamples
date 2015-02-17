@@ -284,5 +284,68 @@
             </objects>
             <point key="canvasLocation" x="1643" y="-66"/>
         </scene>
+        <!--Reactive Button Actions View Controller-->
+        <scene sceneID="0bq-iU-KFH">
+            <objects>
+                <viewController storyboardIdentifier="buttonactions" id="Q97-pc-hFs" customClass="JKReactiveButtonActionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dBd-JR-Ho8"/>
+                        <viewControllerLayoutGuide type="bottom" id="PMM-Ae-W2T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yhI-2G-kb3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvQ-sc-RQJ">
+                                <rect key="frame" x="20" y="90" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.80125473484848486" green="0.80125473484848486" blue="0.80125473484848486" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Sg-91-DgC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="Press Me">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button Press Output" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Chi-3p-57x">
+                                <rect key="frame" x="20" y="157" width="280" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="YEV-p2-fRc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lZ0-AN-1Fs">
+                                <rect key="frame" x="142" y="91" width="37" height="37"/>
+                                <color key="color" red="1" green="0.56211517820000001" blue="0.2481714086" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AvQ-sc-RQJ" firstAttribute="leading" secondItem="yhI-2G-kb3" secondAttribute="leadingMargin" constant="4" id="BQz-r5-lKw"/>
+                            <constraint firstItem="lZ0-AN-1Fs" firstAttribute="centerY" secondItem="AvQ-sc-RQJ" secondAttribute="centerY" id="CmW-oJ-hPD"/>
+                            <constraint firstItem="Chi-3p-57x" firstAttribute="leading" secondItem="AvQ-sc-RQJ" secondAttribute="leading" id="DJg-J0-wc7"/>
+                            <constraint firstAttribute="centerX" secondItem="AvQ-sc-RQJ" secondAttribute="centerX" id="G9S-bQ-Pdy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AvQ-sc-RQJ" secondAttribute="trailing" constant="4" id="gDI-QN-Oks"/>
+                            <constraint firstItem="Chi-3p-57x" firstAttribute="trailing" secondItem="AvQ-sc-RQJ" secondAttribute="trailing" id="gOy-Pn-jpZ"/>
+                            <constraint firstItem="AvQ-sc-RQJ" firstAttribute="top" secondItem="dBd-JR-Ho8" secondAttribute="bottom" constant="26" id="gqo-Gx-oxk"/>
+                            <constraint firstItem="lZ0-AN-1Fs" firstAttribute="centerX" secondItem="AvQ-sc-RQJ" secondAttribute="centerX" id="jno-2D-w5j"/>
+                            <constraint firstItem="Chi-3p-57x" firstAttribute="top" secondItem="AvQ-sc-RQJ" secondAttribute="bottom" constant="27" id="svZ-wN-XWe"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="lZ0-AN-1Fs" id="M3d-la-DrU"/>
+                        <outlet property="defaultTopButton" destination="AvQ-sc-RQJ" id="Efi-MY-efc"/>
+                        <outlet property="resultLabel" destination="Chi-3p-57x" id="T02-e5-Puf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bij-tL-akn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2009" y="-66"/>
+        </scene>
     </scenes>
 </document>
