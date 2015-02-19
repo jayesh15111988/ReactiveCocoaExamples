@@ -12,6 +12,7 @@
 #import "JKReactiveDownloadOperationViewController.h"
 #import "JKReactiveCombineSignalsViewController.h"
 #import "JKReactiveButtonActionsViewController.h"
+#import "JKReactiveRacSequenceViewController.h"
 
 @interface JKReactiveDemosLandingViewController ()
 @property (strong, nonatomic) IBOutlet UIView *footerView;
@@ -64,6 +65,9 @@
         JKReactiveButtonActionsViewController* reactiveButtomDemoViewController = (JKReactiveButtonActionsViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"buttonactions"];
         reactiveButtomDemoViewController.optionSelected = indexPath.row;
         [self.navigationController pushViewController:reactiveButtomDemoViewController animated:YES];
+    } else if (indexPath.row == 9) {
+        JKReactiveRacSequenceViewController* racSequenceController = (JKReactiveRacSequenceViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"racsequence"];
+        [self.navigationController pushViewController:racSequenceController animated:YES];
     }
 }
 

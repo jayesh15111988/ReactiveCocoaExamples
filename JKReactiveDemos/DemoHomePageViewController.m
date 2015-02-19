@@ -156,6 +156,7 @@
         }];
     }];
     
+
     //Eleventh Demo
     NSArray* stringArray = @[@"jayesh",@"kawli",@"mira",@"anagha"];
     NSArray* filteredArray = [[stringArray.rac_sequence filter:^BOOL(NSString* value) {
@@ -305,7 +306,7 @@
         return nil;
     }];
     
-    //Add Delay before sending RACSignal back
+    //Add Delay before sending RACSignal back    
     RACSignal* pauseSig = [samplePauseSignl flattenMap:^id(NSString* returnedValue) {
         RACSignal *pauseSignal = [RACSignal return:@(returnedValue.length > 0)];
         if (pause) {
