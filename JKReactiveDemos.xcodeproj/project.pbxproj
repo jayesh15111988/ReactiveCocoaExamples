@@ -30,6 +30,7 @@
 		38D978731A869A02004CC6C5 /* UISearchBar+RAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D978701A869A02004CC6C5 /* UISearchBar+RAC.m */; };
 		38D978741A869A02004CC6C5 /* UISearchDisplayController+RAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D978721A869A02004CC6C5 /* UISearchDisplayController+RAC.m */; };
 		38D9787A1A86AD05004CC6C5 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D978791A86AD04004CC6C5 /* map.png */; };
+		38E08CC01A96E2390083298D /* JKReactiveRACSignalLifecycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E08CBF1A96E2390083298D /* JKReactiveRACSignalLifecycleViewController.m */; };
 		799FAC9A858183EE7D7FD09A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 904982A420BC57EE2EA9FFA9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,8 @@
 		38D978711A869A02004CC6C5 /* UISearchDisplayController+RAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchDisplayController+RAC.h"; sourceTree = "<group>"; };
 		38D978721A869A02004CC6C5 /* UISearchDisplayController+RAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchDisplayController+RAC.m"; sourceTree = "<group>"; };
 		38D978791A86AD04004CC6C5 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		38E08CBE1A96E2390083298D /* JKReactiveRACSignalLifecycleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKReactiveRACSignalLifecycleViewController.h; sourceTree = "<group>"; };
+		38E08CBF1A96E2390083298D /* JKReactiveRACSignalLifecycleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactiveRACSignalLifecycleViewController.m; sourceTree = "<group>"; };
 		904982A420BC57EE2EA9FFA9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BD6C8FA6871CDA3364444D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +196,8 @@
 				38C628161A92DC0E002F9479 /* JKReactiveButtonActionsViewController.m */,
 				384757D51A95913900E1EB51 /* JKReactiveRacSequenceViewController.h */,
 				384757D61A95913900E1EB51 /* JKReactiveRacSequenceViewController.m */,
+				38E08CBE1A96E2390083298D /* JKReactiveRACSignalLifecycleViewController.h */,
+				38E08CBF1A96E2390083298D /* JKReactiveRACSignalLifecycleViewController.m */,
 			);
 			name = "Demo Controllers";
 			path = ..;
@@ -405,6 +410,7 @@
 				384757D71A95913900E1EB51 /* JKReactiveRacSequenceViewController.m in Sources */,
 				38D978741A869A02004CC6C5 /* UISearchDisplayController+RAC.m in Sources */,
 				3824E8391A7EEAC300362AC3 /* InputValidationViewController.m in Sources */,
+				38E08CC01A96E2390083298D /* JKReactiveRACSignalLifecycleViewController.m in Sources */,
 				3805EB5C1A7EE7A300F3D1E4 /* AppDelegate.m in Sources */,
 				38C628171A92DC0E002F9479 /* JKReactiveButtonActionsViewController.m in Sources */,
 				3824E8361A7EE93500362AC3 /* DemoHomePageViewController.m in Sources */,

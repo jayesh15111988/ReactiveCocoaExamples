@@ -481,5 +481,86 @@
             </objects>
             <point key="canvasLocation" x="2383" y="-66"/>
         </scene>
+        <!--ReactiveRAC Signal Lifecycle View Controller-->
+        <scene sceneID="0Mc-S7-Eem">
+            <objects>
+                <viewController storyboardIdentifier="lifecycle" id="Fe4-T0-oUU" customClass="JKReactiveRACSignalLifecycleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l8i-fc-RJL"/>
+                        <viewControllerLayoutGuide type="bottom" id="zci-pQ-Nsg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vi1-w4-xiR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggv-aP-Sb5">
+                                <rect key="frame" x="60" y="100" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="68p-wy-1sQ"/>
+                                </constraints>
+                                <state key="normal" title="See Reactive In action">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success Block" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0a-xL-3dV">
+                                <rect key="frame" x="20" y="150" width="280" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Block" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y86-YF-Vqk">
+                                <rect key="frame" x="20" y="225" width="280" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Paz-oL-z0K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completion Block" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65k-9j-Wil">
+                                <rect key="frame" x="20" y="300" width="280" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="BB7-HV-fNq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Ggv-aP-Sb5" secondAttribute="centerX" id="7DQ-x8-3u3"/>
+                            <constraint firstItem="S0a-xL-3dV" firstAttribute="leading" secondItem="vi1-w4-xiR" secondAttribute="leadingMargin" constant="4" id="8wU-V9-5Cv"/>
+                            <constraint firstAttribute="centerX" secondItem="S0a-xL-3dV" secondAttribute="centerX" id="F31-6H-ZK1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ggv-aP-Sb5" secondAttribute="trailing" constant="44" id="Fvg-sh-snL"/>
+                            <constraint firstItem="65k-9j-Wil" firstAttribute="top" secondItem="Y86-YF-Vqk" secondAttribute="bottom" constant="15" id="JiD-wn-epH"/>
+                            <constraint firstItem="S0a-xL-3dV" firstAttribute="top" secondItem="Ggv-aP-Sb5" secondAttribute="bottom" constant="15" id="MAa-CQ-LC5"/>
+                            <constraint firstItem="Y86-YF-Vqk" firstAttribute="width" secondItem="65k-9j-Wil" secondAttribute="width" id="VTt-bP-XWE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S0a-xL-3dV" secondAttribute="trailing" constant="4" id="XJB-qV-6Xl"/>
+                            <constraint firstItem="Y86-YF-Vqk" firstAttribute="height" secondItem="65k-9j-Wil" secondAttribute="height" id="Yhm-eJ-b5c"/>
+                            <constraint firstItem="Ggv-aP-Sb5" firstAttribute="top" secondItem="l8i-fc-RJL" secondAttribute="bottom" constant="36" id="ZfC-VF-q8A"/>
+                            <constraint firstItem="Y86-YF-Vqk" firstAttribute="height" secondItem="S0a-xL-3dV" secondAttribute="height" id="bIX-ct-P6d"/>
+                            <constraint firstItem="Y86-YF-Vqk" firstAttribute="width" secondItem="S0a-xL-3dV" secondAttribute="width" id="c5H-DV-dEv"/>
+                            <constraint firstItem="Ggv-aP-Sb5" firstAttribute="leading" secondItem="vi1-w4-xiR" secondAttribute="leadingMargin" constant="44" id="dMx-Gc-ys1"/>
+                            <constraint firstItem="Y86-YF-Vqk" firstAttribute="trailing" secondItem="S0a-xL-3dV" secondAttribute="trailing" id="hak-DU-SEk"/>
+                            <constraint firstItem="Y86-YF-Vqk" firstAttribute="leading" secondItem="S0a-xL-3dV" secondAttribute="leading" id="kuH-Os-2Qk"/>
+                            <constraint firstItem="Y86-YF-Vqk" firstAttribute="top" secondItem="S0a-xL-3dV" secondAttribute="bottom" constant="15" id="wFv-xm-xTy"/>
+                            <constraint firstItem="Y86-YF-Vqk" firstAttribute="leading" secondItem="65k-9j-Wil" secondAttribute="leading" id="wdq-yz-H88"/>
+                            <constraint firstItem="Y86-YF-Vqk" firstAttribute="trailing" secondItem="65k-9j-Wil" secondAttribute="trailing" id="wtb-ku-cor"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="completedLabel" destination="65k-9j-Wil" id="Txw-GL-lqo"/>
+                        <outlet property="errorLabel" destination="Y86-YF-Vqk" id="JDc-hT-Ngq"/>
+                        <outlet property="startLifeCycleButton" destination="Ggv-aP-Sb5" id="rgs-r9-Z8I"/>
+                        <outlet property="successLabel" destination="S0a-xL-3dV" id="YIe-zy-e4g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8O-pV-FkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2749" y="-66"/>
+        </scene>
     </scenes>
 </document>

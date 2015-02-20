@@ -13,6 +13,7 @@
 #import "JKReactiveCombineSignalsViewController.h"
 #import "JKReactiveButtonActionsViewController.h"
 #import "JKReactiveRacSequenceViewController.h"
+#import "JKReactiveRACSignalLifecycleViewController.h"
 
 @interface JKReactiveDemosLandingViewController ()
 @property (strong, nonatomic) IBOutlet UIView *footerView;
@@ -68,6 +69,9 @@
     } else if (indexPath.row == 9) {
         JKReactiveRacSequenceViewController* racSequenceController = (JKReactiveRacSequenceViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"racsequence"];
         [self.navigationController pushViewController:racSequenceController animated:YES];
+    } else if (indexPath.row == 10) {
+        JKReactiveRACSignalLifecycleViewController* lifeCycleViewController = (JKReactiveRACSignalLifecycleViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"lifecycle"];
+        [self.navigationController pushViewController:lifeCycleViewController animated:YES];
     }
 }
 

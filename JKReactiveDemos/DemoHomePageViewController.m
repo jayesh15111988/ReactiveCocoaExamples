@@ -184,6 +184,10 @@
         NSLog(@"First Name Block Completed");
     }];
     
+    [complexSignal subscribeError:^(NSError *error) {
+        NSLog(@"Error Occurred with description %@",[error localizedDescription]);
+    }];
+    
     //Thirteenth Demo
     RACSubject* letters = [RACSubject subject];
     RACSignal* lettersSignal = letters;
