@@ -35,6 +35,9 @@
     }];
     
     [self.inputTextField.rac_textSignal subscribeNext:^(NSString* x) {
+        if(self.textFieldDemoTypeSelected == InputTextAssignValue) {
+            x = [NSString stringWithFormat:@"Dynamic assignment to internal variable is %@", x];
+        }
         self.inputTextValue = x;
     }];
     

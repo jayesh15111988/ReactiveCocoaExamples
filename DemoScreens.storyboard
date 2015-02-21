@@ -367,7 +367,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Array of input values is apple, microsoft, sony, samsung, mcg, bk, google, walmart" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="WTu-7I-vyd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Array of input values : apple, microsoft, sony, samsung, mcg, bk, google, walmart" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="WTu-7I-vyd">
                                 <rect key="frame" x="10" y="80" width="300" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="XQr-w3-T2k"/>
@@ -610,12 +610,12 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" placeholder="Threshold to fire signal" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F1f-ja-Kc4">
                                 <rect key="frame" x="30" y="144" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2.5" borderStyle="roundedRect" placeholder="Signal Delay (Seconds)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C2o-2e-LU2">
                                 <rect key="frame" x="30" y="194" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Y5-nG-Gih">
                                 <rect key="frame" x="30" y="244" width="260" height="30"/>
@@ -722,7 +722,7 @@
                                     <constraint firstAttribute="height" constant="30" id="Xdh-ae-FH4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uZ9-4e-WYh">
                                 <rect key="frame" x="30" y="208" width="260" height="30"/>
@@ -730,7 +730,7 @@
                                     <constraint firstAttribute="height" constant="30" id="X9U-1N-n7e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZ9-64-6hQ">
                                 <rect key="frame" x="30" y="260" width="260" height="30"/>

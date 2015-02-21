@@ -243,17 +243,29 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="13" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reactive Demo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcN-Bs-rQo">
-                                                    <rect key="frame" x="5" y="5" width="270" height="54"/>
+                                                    <rect key="frame" x="37" y="5" width="250" height="54"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="14" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXP-cQ-477">
+                                                    <rect key="frame" x="0.0" y="5" width="35" height="54"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="35" id="kRx-qK-2uc"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="RcN-Bs-rQo" secondAttribute="trailing" constant="4" id="ClQ-Fw-jQA"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="RcN-Bs-rQo" secondAttribute="bottom" constant="-3.5" id="I0V-AR-I1J"/>
-                                                <constraint firstItem="RcN-Bs-rQo" firstAttribute="top" secondItem="jly-DZ-Gm1" secondAttribute="topMargin" constant="-3" id="Qp8-fG-uVt"/>
-                                                <constraint firstItem="RcN-Bs-rQo" firstAttribute="leading" secondItem="jly-DZ-Gm1" secondAttribute="leadingMargin" constant="-3" id="huy-3U-hVG"/>
+                                                <constraint firstItem="hXP-cQ-477" firstAttribute="leading" secondItem="jly-DZ-Gm1" secondAttribute="leadingMargin" constant="-8" id="AMR-i0-nKu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="RcN-Bs-rQo" secondAttribute="bottom" constant="-3.5" id="Kah-Oj-uV4"/>
+                                                <constraint firstItem="RcN-Bs-rQo" firstAttribute="leading" secondItem="hXP-cQ-477" secondAttribute="trailing" constant="2" id="c3P-O3-9vM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hXP-cQ-477" secondAttribute="bottom" constant="-3.5" id="nXe-zx-Y03"/>
+                                                <constraint firstItem="RcN-Bs-rQo" firstAttribute="top" secondItem="jly-DZ-Gm1" secondAttribute="topMargin" constant="-3" id="qSq-8r-V6O"/>
+                                                <constraint firstItem="hXP-cQ-477" firstAttribute="top" secondItem="jly-DZ-Gm1" secondAttribute="topMargin" constant="-3" id="qsx-vK-42t"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RcN-Bs-rQo" secondAttribute="trailing" constant="-8" id="yrw-KL-6SP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

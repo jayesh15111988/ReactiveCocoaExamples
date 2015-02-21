@@ -37,7 +37,7 @@
         if(self.demoTypeSelected == CombineSignals) {
             [combinedSignal subscribeNext:^(RACTuple* tuple) {
               
-                NSString* originalString = [NSString stringWithFormat:@"Combining two signals. Tuple of size %ld received from signals which contain respective values returned by them. Response from first signal %@ and from second signal is %@", [tuple count], [tuple first], [tuple second]];
+                NSString* originalString = [NSString stringWithFormat:@"Combining two signals. Tuple of size %ld received from signals which contain respective values returned by them. Response from first signal '%@' and from second signal is '%@'", [tuple count], [tuple first], [tuple second]];
                 self.resultLabel.text = originalString;
             }];
         } else if (self.demoTypeSelected == CombineSignalsAndReduce) {

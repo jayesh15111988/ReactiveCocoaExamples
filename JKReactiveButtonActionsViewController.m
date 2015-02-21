@@ -77,14 +77,6 @@
                 });
             }
         }];
-        
-        //Not really required this code in this demo
-        /*[self.defaultTopButton.rac_command.executionSignals subscribeNext:^(RACSignal* progressButtonSignal) {
-            [progressButtonSignal subscribeNext:^(UIButton* x) {
-                NSLog(@"Button sent by the first Signal %@",x);
-            }];
-        }]; */
-
     }
 }
 
