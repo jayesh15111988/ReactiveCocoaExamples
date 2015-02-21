@@ -286,48 +286,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1B-7e-Lt8">
-                                <rect key="frame" x="16" y="4" width="130" height="30"/>
-                                <state key="normal" title="First Load">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1B-7e-Lt8">
+                                <rect key="frame" x="10" y="4" width="140" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.67978653489999996" blue="0.29756772739999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ceS-dT-rmz"/>
+                                    <constraint firstAttribute="width" constant="140" id="kuT-hr-Y9S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="First Image Load">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRC-V4-Pe0">
-                                <rect key="frame" x="16" y="43" width="130" height="30"/>
-                                <state key="normal" title="Second Load">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRC-V4-Pe0">
+                                <rect key="frame" x="10" y="43" width="140" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.67978653489999996" blue="0.29756772739999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Second Image Load">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpF-ca-EG8">
-                                <rect key="frame" x="40" y="83" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rpF-ca-EG8">
+                                <rect key="frame" x="40" y="83" width="240" height="170"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="OmO-F5-9qp"/>
+                                    <constraint firstAttribute="height" constant="170" id="hsx-hl-uxM"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Os-p5-iYf">
-                                <rect key="frame" x="40" y="252" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Os-p5-iYf">
+                                <rect key="frame" x="40" y="273" width="240" height="170"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZ4-qS-6h5">
-                                <rect key="frame" x="179" y="4" width="110" height="30"/>
-                                <state key="normal" title="Custom Load">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZ4-qS-6h5">
+                                <rect key="frame" x="169" y="4" width="140" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.67978653489999996" blue="0.29756772739999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="kYZ-2w-Bbz"/>
+                                    <constraint firstAttribute="height" constant="30" id="wyx-Xz-R4x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Chain Load">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qII-O6-C6s">
-                                <rect key="frame" x="150" y="219" width="37" height="37"/>
-                                <color key="color" red="1" green="0.56211517820000001" blue="0.2481714086" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhO-ld-cYa">
-                                <rect key="frame" x="179" y="43" width="110" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhO-ld-cYa">
+                                <rect key="frame" x="210" y="442" width="110" height="30"/>
                                 <state key="normal" title="Activity">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6l-4b-eVS">
+                                <rect key="frame" x="169" y="43" width="140" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.67978653489999996" blue="0.29756772739999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Clear All Images">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="O3s-4Z-fgs">
+                                <rect key="frame" x="142" y="149" width="37" height="37"/>
+                                <color key="color" red="1" green="0.67978653489999996" blue="0.29756772739999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7BX-0L-bv5">
+                                <rect key="frame" x="142" y="339" width="37" height="37"/>
+                                <color key="color" red="1" green="0.67978653489999996" blue="0.29756772739999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Os-p5-iYf" firstAttribute="top" secondItem="rpF-ca-EG8" secondAttribute="bottom" constant="20" id="3bd-4x-Jwy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nZ4-qS-6h5" secondAttribute="trailing" constant="-5" id="AAp-yv-utM"/>
+                            <constraint firstItem="J1B-7e-Lt8" firstAttribute="trailing" secondItem="cRC-V4-Pe0" secondAttribute="trailing" id="APS-yE-Xtz"/>
+                            <constraint firstItem="rpF-ca-EG8" firstAttribute="trailing" secondItem="1Os-p5-iYf" secondAttribute="trailing" id="EMK-cP-GOl"/>
+                            <constraint firstItem="rpF-ca-EG8" firstAttribute="height" secondItem="1Os-p5-iYf" secondAttribute="height" id="Edj-hy-9OC"/>
+                            <constraint firstItem="J1B-7e-Lt8" firstAttribute="height" secondItem="cRC-V4-Pe0" secondAttribute="height" id="HSS-vG-Ds6"/>
+                            <constraint firstItem="1Os-p5-iYf" firstAttribute="centerY" secondItem="7BX-0L-bv5" secondAttribute="centerY" id="Jmh-gS-Sm9"/>
+                            <constraint firstItem="E6l-4b-eVS" firstAttribute="top" secondItem="nZ4-qS-6h5" secondAttribute="bottom" constant="9" id="KYw-mx-HwD"/>
+                            <constraint firstItem="rpF-ca-EG8" firstAttribute="centerX" secondItem="O3s-4Z-fgs" secondAttribute="centerX" id="NI6-mX-1iv"/>
+                            <constraint firstItem="E6l-4b-eVS" firstAttribute="height" secondItem="nZ4-qS-6h5" secondAttribute="height" id="O20-gl-T8Z"/>
+                            <constraint firstItem="1Os-p5-iYf" firstAttribute="centerX" secondItem="7BX-0L-bv5" secondAttribute="centerX" id="RmO-pW-8en"/>
+                            <constraint firstItem="rpF-ca-EG8" firstAttribute="leading" secondItem="uPK-Ds-PyF" secondAttribute="leadingMargin" constant="24" id="UcL-e7-cps"/>
+                            <constraint firstItem="E6l-4b-eVS" firstAttribute="trailing" secondItem="nZ4-qS-6h5" secondAttribute="trailing" id="WBh-Or-GIH"/>
+                            <constraint firstItem="nZ4-qS-6h5" firstAttribute="top" secondItem="uPK-Ds-PyF" secondAttribute="topMargin" constant="4" id="WZg-64-tHX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rpF-ca-EG8" secondAttribute="trailing" constant="24" id="Yph-HF-0xo"/>
+                            <constraint firstItem="cRC-V4-Pe0" firstAttribute="top" secondItem="J1B-7e-Lt8" secondAttribute="bottom" constant="9" id="bD9-Gw-PKj"/>
+                            <constraint firstItem="rpF-ca-EG8" firstAttribute="top" secondItem="E6l-4b-eVS" secondAttribute="bottom" constant="10" id="cVC-ZC-eEw"/>
+                            <constraint firstAttribute="centerX" secondItem="rpF-ca-EG8" secondAttribute="centerX" id="dwl-VK-CGe"/>
+                            <constraint firstItem="rpF-ca-EG8" firstAttribute="centerY" secondItem="O3s-4Z-fgs" secondAttribute="centerY" id="k4y-nk-GKt"/>
+                            <constraint firstItem="rpF-ca-EG8" firstAttribute="leading" secondItem="1Os-p5-iYf" secondAttribute="leading" id="ltW-7B-CuP"/>
+                            <constraint firstItem="J1B-7e-Lt8" firstAttribute="top" secondItem="uPK-Ds-PyF" secondAttribute="topMargin" constant="4" id="o0U-NR-vaD"/>
+                            <constraint firstItem="E6l-4b-eVS" firstAttribute="leading" secondItem="nZ4-qS-6h5" secondAttribute="leading" id="pLg-TO-17R"/>
+                            <constraint firstItem="J1B-7e-Lt8" firstAttribute="leading" secondItem="uPK-Ds-PyF" secondAttribute="leadingMargin" constant="-6" id="v0z-as-X8s"/>
+                            <constraint firstItem="J1B-7e-Lt8" firstAttribute="leading" secondItem="cRC-V4-Pe0" secondAttribute="leading" id="wfa-Sa-gWr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UcL-e7-cps"/>
+                                <exclude reference="Yph-HF-0xo"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="qII-O6-C6s" id="WJQ-YE-pkb"/>
+                        <outlet property="activityIndicatorFirstImage" destination="O3s-4Z-fgs" id="dct-Yc-MS6"/>
+                        <outlet property="activityIndicatorSecondImage" destination="7BX-0L-bv5" id="KOn-Ng-5T4"/>
                         <outlet property="beginHeavyOperationButton" destination="mhO-ld-cYa" id="YR7-eE-qiR"/>
                         <outlet property="chainLoadButton" destination="nZ4-qS-6h5" id="asO-SR-HFk"/>
+                        <outlet property="clearAllButton" destination="E6l-4b-eVS" id="4Ar-uJ-D4N"/>
                         <outlet property="firstImageView" destination="rpF-ca-EG8" id="lRH-tg-eeY"/>
                         <outlet property="imageLoadButton" destination="J1B-7e-Lt8" id="MjI-cG-kQ5"/>
                         <outlet property="secondButton" destination="cRC-V4-Pe0" id="Vsf-3X-Sri"/>

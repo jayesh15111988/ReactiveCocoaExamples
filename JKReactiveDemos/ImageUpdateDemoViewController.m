@@ -6,6 +6,12 @@
 //  Copyright (c) 2015 Jayesh Kawli Backup. All rights reserved.
 //
 
+
+#define STEP_LOAD_FIRST_IMAGE_URL @"http://static.sportskeeda.com/wp-content/uploads/2014/03/roger-federer2-2142450.jpg"
+#define STEP_LOAD_SECOND_IMAGE_URL @"http://i.telegraph.co.uk/multimedia/archive/02796/Rafael_Nadal_2796036b.jpg"
+#define CHAIN_LOAD_FIRST_IMAGE_URL @"http://www.befoto.com/data/photos/60_1maria_sharapova.jpg"
+#define CHAIN_LOAD_SECOND_IMAGE_URL @"http://a2.files.biography.com/image/upload/c_fill,dpr_1.0,g_face,h_300,q_80,w_300/MTE4MDAzNDEwNzU3MDYwMTEw.jpg"
+
 #import "ImageUpdateDemoViewController.h"
 
 @interface ImageUpdateDemoViewController ()
@@ -15,103 +21,94 @@
 @property (strong, nonatomic) UIImage* firstImage;
 @property (weak, nonatomic) IBOutlet UIButton *secondButton;
 @property (weak, nonatomic) IBOutlet UIButton *chainLoadButton;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorFirstImage;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorSecondImage;
 @property (weak, nonatomic) IBOutlet UIButton *beginHeavyOperationButton;
 @property (strong, nonatomic) UIImage* secondImage;
+@property (weak, nonatomic) IBOutlet UIButton *clearAllButton;
+
 @end
 
 @implementation ImageUpdateDemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Dynamic Data Download";
     
     //You can always call subscribe** methods on Reactive Cocoa for right hand side, as it returns the RACSignal back
-    //Twenty Fourth Demo
     RAC(self, firstImageView.image) = RACObserve(self, firstImage);
     RAC(self, secondImageView.image) = RACObserve(self, secondImage);
     
-    self.imageLoadButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+    self.imageLoadButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(UIButton* stepLoadFirstButton) {
         NSLog(@"Image Load Button Pressed");
-        self.firstImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.bellartefutsal.com/site/images/video/roger-federer-img10267_668.jpg"]]];
+        [self.activityIndicatorFirstImage startAnimating];
+        [[self getRACSignalForImageWithURL:STEP_LOAD_FIRST_IMAGE_URL] subscribeNext:^(UIImage* image) {
+            [self.activityIndicatorFirstImage stopAnimating];
+            self.firstImage = image;
+        }];
+        
         return [RACSignal empty];
     }];
     
-    [[self.secondButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-    self.secondImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://blogs.thenews.com.pk/blogs/wp-content/uploads/2013/11/roger.jpg"]]];
-        NSLog(@"This button is pressed");
+    [[self.secondButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton* secondImageLoadButton) {
+        [self.activityIndicatorSecondImage startAnimating];
+        [[self getRACSignalForImageWithURL:STEP_LOAD_SECOND_IMAGE_URL] subscribeNext:^(UIImage* image) {
+            [self.activityIndicatorSecondImage stopAnimating];
+            self.secondImage = image;
+        }];
     }];
     
     self.chainLoadButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        return [[self getRACSignalForImageWithURL:@"http://www.bellartefutsal.com/site/images/video/roger-federer-img10267_668.jpg"] deliverOn:[RACScheduler scheduler]];
+        [self.activityIndicatorFirstImage startAnimating];
+        return [self getRACSignalForImageWithURL:CHAIN_LOAD_FIRST_IMAGE_URL];
     }];
     
     [self.chainLoadButton.rac_command.executing subscribeNext:^(id x) {
         NSLog(@"Code Is curretly being executed");
-    
     }];
     
     [self.chainLoadButton.rac_command.executionSignals subscribeNext:^(RACSignal* firstImageLoadSignal) {
        
-        [[[firstImageLoadSignal map:^id(NSURL* value) {
-            return [UIImage imageWithData:[NSData dataWithContentsOfURL:value]];
-        }] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(UIImage* x) {
-            self.firstImageView.image = x;
+        [firstImageLoadSignal subscribeNext:^(UIImage* image) {
+            self.firstImage = image;
         }];
         
         [firstImageLoadSignal subscribeCompleted:^{
+            [self.activityIndicatorFirstImage stopAnimating];
             NSLog(@"First Image loaded successfully");
         }];
         
-        RACSignal* secondSignal = [[self getRACSignalForImageWithURL:@"http://blogs.thenews.com.pk/blogs/wp-content/uploads/2013/11/roger.jpg"] deliverOn:[RACScheduler scheduler]];
+        [self.activityIndicatorSecondImage startAnimating];
+        RACSignal* secondSignal = [self getRACSignalForImageWithURL:CHAIN_LOAD_SECOND_IMAGE_URL];
         
-        [[[secondSignal map:^id(NSURL* value) {
-            return [UIImage imageWithData:[NSData dataWithContentsOfURL:value]];
-        }] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(UIImage* secondImage) {
-            self.secondImageView.image = secondImage;
+        [secondSignal subscribeNext:^(UIImage* image) {
+            self.secondImage = image;
         }];
         
         [secondSignal subscribeCompleted:^{
+            [self.activityIndicatorSecondImage stopAnimating];
             NSLog(@"Second Image loaded successfully");
         }];
     }];
     
-    
-    //RACCommand execution
-    RACCommand* executingCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        NSLog(@"This is cold signal and kept on hold until user clicks the button");
-        double delayInSeconds = 2.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        
-    });
-    return [RACSignal empty];
+    [[self.clearAllButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton* cleatAllButton) {
+        self.firstImageView.image = nil;
+        self.secondImageView.image = nil;
+        self.firstImageView.backgroundColor = [UIColor lightGrayColor];
+        self.secondImageView.backgroundColor = [UIColor lightGrayColor];
     }];
-    
-    
-    //Twenty fifth and sixth demo
-    [executingCommand.executing subscribeNext:^(id x) {
-        [self.activityIndicator startAnimating];
-        NSLog(@"Executing");
-    }];
-    
-    [executingCommand.executing subscribeCompleted:^{
-        [self.activityIndicator stopAnimating];
-        NSLog(@"Execution completed sucessfully");
-    }];
-    
-    //Execute this command with execute method
-    [[self.beginHeavyOperationButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        [executingCommand execute:nil];
-    }];
-    
 }
 
 -(RACSignal*)getRACSignalForImageWithURL:(NSString*)stringURL {
-    return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    RACSignal* urlSignal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:[NSURL URLWithString:stringURL]];
         [subscriber sendCompleted];
         return nil;
     }] deliverOn:[RACScheduler scheduler]];
+    
+    return [[urlSignal map:^id(NSURL* value) {
+        return [UIImage imageWithData:[NSData dataWithContentsOfURL:value]];
+    }] deliverOn:[RACScheduler mainThreadScheduler]];
 }
 
 

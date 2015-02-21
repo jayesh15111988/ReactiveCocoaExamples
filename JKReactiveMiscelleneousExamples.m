@@ -7,6 +7,7 @@
 //
 
 #import "JKReactiveMiscelleneousExamples.h"
+#import "Airline.h"
 
 @implementation JKReactiveMiscelleneousExamples
 
@@ -166,6 +167,63 @@
     myTestButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(UIButton* testButton) {
         NSLog(@"Test button %@ pressed", testButton);
         return [RACSignal empty];
+    }];
+}
+
+-(void)reactiveCocoaNetworkRequest {
+    
+    AFHTTPRequestOperationManager* manager = [[AFHTTPRequestOperationManager alloc]
+                    initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASE_URL, API_EXTENSION]]];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    
+    RACSignal* networkOperationSignal = [self getNetworkDataWithManager:manager];
+    
+    [networkOperationSignal subscribeNext:^(RACTuple* tuple) {
+        NSArray* collectionOfAirlines = tuple[1][@"airlines"];
+        RACSignal* signalWithAirlinesCollection = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:collectionOfAirlines];
+            [subscriber sendCompleted];
+            return nil;
+        }];
+        
+        RACSignal* signalWithModelsConversion = [self convertdictionaryToModels:signalWithAirlinesCollection];
+        
+        [signalWithModelsConversion subscribeNext:^(NSArray* airlinesCollection) {
+            NSLog(@"Total objects %lu",(unsigned long)[airlinesCollection count]);
+        }];
+        
+        [signalWithModelsConversion subscribeError:^(NSError *error) {
+            NSLog(@"Error %@ Occurred",[error localizedDescription]);
+        } completed:^{
+            NSLog(@"Network data import and models creation operation finished");
+        }];
+    }];
+}
+
+-(RACSignal*)getNetworkDataWithManager:(AFHTTPRequestOperationManager*)manager {
+    //Please put the URL and parameters of your choice - This is just a dummy request with dummy parameters
+    RACSignal* networkOperationSignal = [manager rac_GET:@"airlines/rest/v1/json/all" parameters:@{@"appId" : APP_ID,
+                                                                                                        @"appKey" : APP_KEY}];
+    return networkOperationSignal;
+}
+
+
+//This is just a dummy object model - Not necessarily will it suit to your needs. Please change it accordingly
+-(RACSignal*)convertdictionaryToModels:(RACSignal*)dictSignal {
+    return [dictSignal map:^id(NSArray* dictCollection) {
+        
+        NSMutableArray* modelsCollection = [NSMutableArray new];
+        for(NSDictionary* individualDict in dictCollection) {
+            Airline* airlineModel = [Airline new];
+            airlineModel.name = individualDict[@"name"];
+            airlineModel.iata = individualDict[@"iata"];
+            airlineModel.isActive = [individualDict[@"active"] boolValue];
+            [modelsCollection addObject:airlineModel];
+        }
+        
+        return [modelsCollection copy];
     }];
 }
 

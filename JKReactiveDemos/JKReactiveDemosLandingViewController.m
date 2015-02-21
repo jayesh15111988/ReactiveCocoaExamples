@@ -17,6 +17,8 @@
 #import "JKReactivePauseSignalViewController.h"
 #import "JKReactiveTimeoutDemoViewController.h"
 #import "InputValidationViewController.h"
+#import "ImageUpdateDemoViewController.h"
+#import "JKReactiveExecutingSignalViewController.h"
 
 @interface JKReactiveDemosLandingViewController ()
 @property (strong, nonatomic) IBOutlet UIView *footerView;
@@ -35,7 +37,7 @@
     [self.navigationController.navigationBar setTranslucent:NO];
 
     self.title = @"Reactive Cocoa Demo";
-    self.reactiveDemosList = @[@"RACObserve with input textField mapped to Boolean Value", @"RACSignal with mapped input textField value", @"RACSignal with assigning input textField value to variable", @"Search Field with signal throttle and skip", @"Download operation with schedular", @"Combine Signals from multiple sources", @"Combine Signals with reduce", @"Assigning action to button using RACCommand", @"Executing command progress using indicator and rac_command along with completion block", @"rac_sequence Demo with Filter and Map functions", @"RACSignal lifecycle using subscribeNext and subscribeCompleted command", @"Subscribe first, send data later!", @"Simulate timeout with dummy Network request and RACDisposable object", @"RACSignal zip, reduce. Interaction with RACTuple", @"Simulate Flatten map - Mapping value to signal", @"Replay Signals. Use older value", @"Multicast. Multiple observers for single observee", @"Pause Signal - Add pause before next subscribeNext event. Subscribe next based on condition", @"Action Sheet in operation using Reactive Signals", @"Enable button based on input fields' validity", @"Network Operation using Reactive Signals", @"Another way to handle button clicks using rac_signalForControlEvents method", @"Update UI based on the dynamic change in internal variable values. (e.g. UIImage updates UIImageView)", @"RACSignal executing update with Activity Indicator one more time", @"Execute RACCommand manually with execute method call", @"UISearchBar Demo with text update detection and SwitchToLatest"];
+    self.reactiveDemosList = @[@"RACObserve with input textField mapped to Boolean Value", @"RACSignal with mapped input textField value", @"RACSignal with assigning input textField value to variable", @"Search Field with signal throttle and skip", @"Download operation with schedular", @"Combine Signals from multiple sources", @"Combine Signals with reduce", @"Assigning action to button using RACCommand", @"Executing command progress using indicator and rac_command along with completion block", @"rac_sequence Demo with Filter and Map functions", @"RACSignal lifecycle using subscribeNext and subscribeCompleted command", @"Subscribe first, send data later!", @"Simulate timeout with dummy Network request and RACDisposable object", @"RACSignal zip, reduce. Interaction with RACTuple", @"Simulate Flatten map - Mapping value to signal", @"Replay Signals. Use older value", @"Multicast. Multiple observers for single observee", @"Pause Signal - Add pause before next subscribeNext event. Subscribe next based on condition", @"Action Sheet in operation using Reactive Signals", @"Enable button based on input fields' validity", @"Network Operation using Reactive Signals", @"Another way to handle button clicks using rac_signalForControlEvents method", @"Update UI based on the dynamic change in internal variable values. (e.g. UIImage updates UIImageView)", @"RACSignal executing update with Activity Indicator", @"Execute RACCommand manually with execute method call", @"UISearchBar Demo with text update detection and SwitchToLatest"];
     [self.tableView reloadData];
     
 }
@@ -84,6 +86,12 @@
     } else if (indexPath.row == 19) {
         InputValidationViewController* inputValidatorViewController = (InputValidationViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"inputvalidation"];
         [self.navigationController pushViewController:inputValidatorViewController animated:YES];
+    } else if (indexPath.row == 22) {
+        ImageUpdateDemoViewController* imageUpdateDemo = (ImageUpdateDemoViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"imagedemo"];
+        [self.navigationController pushViewController:imageUpdateDemo animated:YES];
+    } else if (indexPath.row == 23) {
+        JKReactiveExecutingSignalViewController* executeSignalDemoViewController = (JKReactiveExecutingSignalViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"executesignal"];
+        [self.navigationController pushViewController:executeSignalDemoViewController animated:YES];
     }
 }
 

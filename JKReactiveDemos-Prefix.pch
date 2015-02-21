@@ -17,5 +17,5 @@
 #import <AFNetworking-RACExtensions/AFHTTPRequestOperationManager+RACSupport.h>
 #define BASE_URL @"https://api.flightstats.com/"
 #define API_EXTENSION @"flex/"
-#define APP_ID @"9738bcd8"
-#define APP_KEY @"6c713890a9bf2822f783ab8870332617"
+#define APP_ID @""
+#define APP_KEY @""

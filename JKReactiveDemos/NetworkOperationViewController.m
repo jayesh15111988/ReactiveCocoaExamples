@@ -55,9 +55,6 @@
     NSString* temp = @"Reactive Cocoa is so confusing";
     
     self.networkOpearationButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        
-        NSLog(temp);
-        
         return [RACSignal empty];
     }];
     
@@ -88,12 +85,8 @@
 }
 
 -(RACSignal*)getNetworkData {
-    
-    
-    
     RACSignal* networkOperationSignal = [self.manager rac_GET:@"airlines/rest/v1/json/all" parameters:@{@"appId" : APP_ID,
                                                                                                         @"appKey" : APP_KEY}];
-    
     return networkOperationSignal;
 }
 

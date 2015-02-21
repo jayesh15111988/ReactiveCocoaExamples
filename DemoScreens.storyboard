@@ -795,5 +795,73 @@
             </objects>
             <point key="canvasLocation" x="3518" y="-66"/>
         </scene>
+        <!--Reactive Executing Signal View Controller-->
+        <scene sceneID="Gcv-rf-fMF">
+            <objects>
+                <viewController storyboardIdentifier="executesignal" id="1nG-3z-50a" customClass="JKReactiveExecutingSignalViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xRg-Pn-hP6"/>
+                        <viewControllerLayoutGuide type="bottom" id="MfQ-GM-QXk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ENV-xp-V0p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PT5-Xe-otB">
+                                <rect key="frame" x="80" y="134" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LKS-hl-YDm"/>
+                                    <constraint firstAttribute="width" constant="160" id="Rcm-RA-a9w"/>
+                                </constraints>
+                                <state key="normal" title="Press to Begin">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="W1A-gr-J7w">
+                                <rect key="frame" x="142" y="197" width="37" height="37"/>
+                                <color key="color" red="1" green="0.67978653489999996" blue="0.29756772739999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="aqB-Uv-UGC">
+                                <rect key="frame" x="20" y="251" width="280" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="cfX-Dh-nh8"/>
+                                    <constraint firstAttribute="height" constant="50" id="iE7-jV-qM0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Operation Delay (Sec)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FKy-oq-bcQ">
+                                <rect key="frame" x="80" y="84" width="160" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="PT5-Xe-otB" secondAttribute="centerX" id="Ljh-d5-e89"/>
+                            <constraint firstItem="PT5-Xe-otB" firstAttribute="top" secondItem="FKy-oq-bcQ" secondAttribute="bottom" constant="20" id="RJk-Af-TtO"/>
+                            <constraint firstItem="FKy-oq-bcQ" firstAttribute="top" secondItem="xRg-Pn-hP6" secondAttribute="bottom" constant="20" id="gvJ-Xf-WbG"/>
+                            <constraint firstAttribute="centerX" secondItem="W1A-gr-J7w" secondAttribute="centerX" id="h4s-t0-PCo"/>
+                            <constraint firstItem="PT5-Xe-otB" firstAttribute="leading" secondItem="FKy-oq-bcQ" secondAttribute="leading" id="ngO-ye-Aun"/>
+                            <constraint firstItem="PT5-Xe-otB" firstAttribute="trailing" secondItem="FKy-oq-bcQ" secondAttribute="trailing" id="pGA-YW-spn"/>
+                            <constraint firstAttribute="centerX" secondItem="aqB-Uv-UGC" secondAttribute="centerX" id="rad-Rk-WyV"/>
+                            <constraint firstItem="aqB-Uv-UGC" firstAttribute="top" secondItem="W1A-gr-J7w" secondAttribute="bottom" constant="17" id="s3z-YB-5Dn"/>
+                            <constraint firstItem="W1A-gr-J7w" firstAttribute="top" secondItem="PT5-Xe-otB" secondAttribute="bottom" constant="23" id="vcZ-Dd-kjF"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="W1A-gr-J7w" id="ekd-57-Gdr"/>
+                        <outlet property="beginHeavyOperationButton" destination="PT5-Xe-otB" id="Cpc-MU-RZH"/>
+                        <outlet property="operationDelayTextField" destination="FKy-oq-bcQ" id="g8s-q8-sEI"/>
+                        <outlet property="statusLabel" destination="aqB-Uv-UGC" id="S2T-Ch-h7q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AE7-lv-vgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3888" y="-66"/>
+        </scene>
     </scenes>
 </document>
