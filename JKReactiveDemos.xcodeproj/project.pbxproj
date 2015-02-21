@@ -26,6 +26,7 @@
 		384757D71A95913900E1EB51 /* JKReactiveRacSequenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384757D61A95913900E1EB51 /* JKReactiveRacSequenceViewController.m */; };
 		3897D60D1A97EF64001C201E /* JKReactiveMiscelleneousExamples.m in Sources */ = {isa = PBXBuildFile; fileRef = 3897D60C1A97EF64001C201E /* JKReactiveMiscelleneousExamples.m */; };
 		3897D6101A982EFF001C201E /* JKReactivePauseSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3897D60F1A982EFF001C201E /* JKReactivePauseSignalViewController.m */; };
+		3897D6131A983D5E001C201E /* JKReactiveTimeoutDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3897D6121A983D5E001C201E /* JKReactiveTimeoutDemoViewController.m */; };
 		38C628141A92C9EB002F9479 /* JKReactiveCombineSignalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C628131A92C9EB002F9479 /* JKReactiveCombineSignalsViewController.m */; };
 		38C628171A92DC0E002F9479 /* JKReactiveButtonActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C628161A92DC0E002F9479 /* JKReactiveButtonActionsViewController.m */; };
 		38D9786E1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D9786D1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m */; };
@@ -85,6 +86,8 @@
 		3897D60C1A97EF64001C201E /* JKReactiveMiscelleneousExamples.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactiveMiscelleneousExamples.m; sourceTree = "<group>"; };
 		3897D60E1A982EFF001C201E /* JKReactivePauseSignalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKReactivePauseSignalViewController.h; sourceTree = "<group>"; };
 		3897D60F1A982EFF001C201E /* JKReactivePauseSignalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactivePauseSignalViewController.m; sourceTree = "<group>"; };
+		3897D6111A983D5E001C201E /* JKReactiveTimeoutDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKReactiveTimeoutDemoViewController.h; sourceTree = "<group>"; };
+		3897D6121A983D5E001C201E /* JKReactiveTimeoutDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactiveTimeoutDemoViewController.m; sourceTree = "<group>"; };
 		38C628121A92C9EB002F9479 /* JKReactiveCombineSignalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKReactiveCombineSignalsViewController.h; sourceTree = "<group>"; };
 		38C628131A92C9EB002F9479 /* JKReactiveCombineSignalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactiveCombineSignalsViewController.m; sourceTree = "<group>"; };
 		38C628151A92DC0E002F9479 /* JKReactiveButtonActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKReactiveButtonActionsViewController.h; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 				3897D60C1A97EF64001C201E /* JKReactiveMiscelleneousExamples.m */,
 				3897D60E1A982EFF001C201E /* JKReactivePauseSignalViewController.h */,
 				3897D60F1A982EFF001C201E /* JKReactivePauseSignalViewController.m */,
+				3897D6111A983D5E001C201E /* JKReactiveTimeoutDemoViewController.h */,
+				3897D6121A983D5E001C201E /* JKReactiveTimeoutDemoViewController.m */,
 			);
 			name = "Demo Controllers";
 			path = ..;
@@ -419,6 +424,7 @@
 				380F7DAC1A9186F30089DAA0 /* JKReactiveDownloadOperationViewController.m in Sources */,
 				3897D60D1A97EF64001C201E /* JKReactiveMiscelleneousExamples.m in Sources */,
 				384757D71A95913900E1EB51 /* JKReactiveRacSequenceViewController.m in Sources */,
+				3897D6131A983D5E001C201E /* JKReactiveTimeoutDemoViewController.m in Sources */,
 				38D978741A869A02004CC6C5 /* UISearchDisplayController+RAC.m in Sources */,
 				3824E8391A7EEAC300362AC3 /* InputValidationViewController.m in Sources */,
 				38E08CC01A96E2390083298D /* JKReactiveRACSignalLifecycleViewController.m in Sources */,

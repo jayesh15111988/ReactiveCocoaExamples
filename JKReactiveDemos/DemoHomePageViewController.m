@@ -263,6 +263,7 @@
         }];
     }];
     
+    //Only deferSignal is non-empty this block gets executed. This happens only if 
     [deferSignal subscribeNext:^(id x) {
         NSLog(@"Value received is %@",x);
     }];

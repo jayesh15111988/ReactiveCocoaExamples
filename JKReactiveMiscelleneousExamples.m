@@ -130,4 +130,29 @@
     }];
 }
 
+-(void)deferSignalWithActionSheet {
+    //Defer means the block inside won't get executed unless it has at least one
+    RACSignal* deferSignal = [RACSignal defer:^RACSignal *{
+        UIActionSheet* sheet = [UIActionSheet new];
+        [sheet addButtonWithTitle:@"Steve Jobs"];
+        [sheet addButtonWithTitle:@"Larry Page"];
+        [sheet addButtonWithTitle:@"Larry Ellison"];
+        [sheet addButtonWithTitle:@"Bill Gates"];
+        sheet.destructiveButtonIndex = 3;
+        
+        //Just uncomment this line to show it in your current UIViewController
+        //[sheet showInView:self.view];
+        //Only return non-empty signal is button clicked has index other than destructive button
+        return [sheet.rac_buttonClickedSignal filter:^BOOL(NSNumber* value) {
+            return ([value integerValue] != sheet.destructiveButtonIndex);
+        }];
+    }];
+
+    //This signal will not get fired only if button pressed by user is other than destructive button
+    //This will be a value of button index pressed
+    [deferSignal subscribeNext:^(id x) {
+        NSLog(@"Options Selected from Action sheet is %@",x);
+    }];
+}
+
 @end
