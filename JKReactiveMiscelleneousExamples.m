@@ -9,6 +9,14 @@
 #import "JKReactiveMiscelleneousExamples.h"
 #import "Airline.h"
 
+@interface JKReactiveMiscelleneousExamples ()
+
+@property (nonatomic, assign) NSNumber* secondsNumber;
+@property (nonatomic, strong) NSTimer* timer;
+@property (nonatomic, assign) NSInteger currentSeconds;
+
+@end
+
 @implementation JKReactiveMiscelleneousExamples
 
 -(void)subscribeFirstSendSignalLaterDemo {
@@ -262,6 +270,44 @@
             NSLog(@"Finally Completed Execution of this Block");
         }];
     }];
+    
+    //You can also manually trigger the RACCommand execution once you have variable in which RACCommand is stored
+    //Say you want to manually execute above raccommand, which will essentially simulate the button click
+    [beginHeavyOperationButton.rac_command execute:nil];
+    //It will have a same effect as the button click
+}
+
+-(void)switchToLatestDemo {
+    self.currentSeconds = 0;
+    [self setupTimer];
+    
+    //Each time secondsNumber value is changed, this block will be executed
+    //Add delay to simulate switch to latest result on this operation
+    
+    [[[RACObserve(self, secondsNumber) map:^id(NSNumber* secs) {
+        [NSThread sleepForTimeInterval:1.0];
+        NSInteger originalNumberOfSeconds = [secs integerValue];
+        NSNumber* updatedNumber = @(originalNumberOfSeconds*10);
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:updatedNumber];
+            return  nil;
+        }];
+    }] switchToLatest] subscribeNext:^(NSNumber* secondsSecondBlock) {
+        NSLog(@"Current seconds *10 are %ld",(long)[secondsSecondBlock integerValue]);
+    }];
+}
+
+-(void)setupTimer {
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
+}
+
+-(void)resetTimer {
+    [self.timer invalidate];
+}
+
+-(void)timerCallback {
+    self.currentSeconds++;
+    self.secondsNumber = @(self.currentSeconds);
 }
 
 @end

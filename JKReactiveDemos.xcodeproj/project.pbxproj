@@ -92,8 +92,8 @@
 		38C628131A92C9EB002F9479 /* JKReactiveCombineSignalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactiveCombineSignalsViewController.m; sourceTree = "<group>"; };
 		38C628151A92DC0E002F9479 /* JKReactiveButtonActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKReactiveButtonActionsViewController.h; sourceTree = "<group>"; };
 		38C628161A92DC0E002F9479 /* JKReactiveButtonActionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKReactiveButtonActionsViewController.m; sourceTree = "<group>"; };
-		38D9786C1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoReactiveSearchBarViewController.h; sourceTree = "<group>"; };
-		38D9786D1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoReactiveSearchBarViewController.m; sourceTree = "<group>"; };
+		38D9786C1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoReactiveSearchBarViewController.h; path = JKReactiveDemos/DemoReactiveSearchBarViewController.h; sourceTree = "<group>"; };
+		38D9786D1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoReactiveSearchBarViewController.m; path = JKReactiveDemos/DemoReactiveSearchBarViewController.m; sourceTree = "<group>"; };
 		38D9786F1A869A02004CC6C5 /* UISearchBar+RAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+RAC.h"; sourceTree = "<group>"; };
 		38D978701A869A02004CC6C5 /* UISearchBar+RAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+RAC.m"; sourceTree = "<group>"; };
 		38D978711A869A02004CC6C5 /* UISearchDisplayController+RAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchDisplayController+RAC.h"; sourceTree = "<group>"; };
@@ -219,6 +219,8 @@
 				3824E83C1A7EF25700362AC3 /* NetworkOperationViewController.m */,
 				382435AC1A8082BD009EB87A /* ImageUpdateDemoViewController.h */,
 				382435AD1A8082BD009EB87A /* ImageUpdateDemoViewController.m */,
+				38D9786C1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.h */,
+				38D9786D1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m */,
 			);
 			name = "Demo Controllers";
 			path = ..;
@@ -229,8 +231,6 @@
 			children = (
 				3824E8341A7EE93500362AC3 /* DemoHomePageViewController.h */,
 				3824E8351A7EE93500362AC3 /* DemoHomePageViewController.m */,
-				38D9786C1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.h */,
-				38D9786D1A86980E004CC6C5 /* DemoReactiveSearchBarViewController.m */,
 				380F7D9E1A914DA90089DAA0 /* JKReactiveDemosLandingViewController.h */,
 				380F7D9F1A914DA90089DAA0 /* JKReactiveDemosLandingViewController.m */,
 			);

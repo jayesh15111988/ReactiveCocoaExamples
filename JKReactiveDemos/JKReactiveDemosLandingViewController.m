@@ -18,6 +18,7 @@
 #import "JKReactiveTimeoutDemoViewController.h"
 #import "InputValidationViewController.h"
 #import "ImageUpdateDemoViewController.h"
+#import "DemoReactiveSearchBarViewController.h"
 
 @interface JKReactiveDemosLandingViewController ()
 @property (strong, nonatomic) IBOutlet UIView *footerView;
@@ -88,8 +89,9 @@
     } else if (indexPath.row == 22) {
         ImageUpdateDemoViewController* imageUpdateDemo = (ImageUpdateDemoViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"imagedemo"];
         [self.navigationController pushViewController:imageUpdateDemo animated:YES];
-    } else {
-    
+    } else if(indexPath.row == 25){
+        DemoReactiveSearchBarViewController* reactiveSearchViewController = (DemoReactiveSearchBarViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"reactivesearch"];
+        [self.navigationController pushViewController:reactiveSearchViewController animated:YES];
     }
 }
 
