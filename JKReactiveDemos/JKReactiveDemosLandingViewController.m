@@ -16,6 +16,7 @@
 #import "JKReactiveRACSignalLifecycleViewController.h"
 #import "JKReactivePauseSignalViewController.h"
 #import "JKReactiveTimeoutDemoViewController.h"
+#import "InputValidationViewController.h"
 
 @interface JKReactiveDemosLandingViewController ()
 @property (strong, nonatomic) IBOutlet UIView *footerView;
@@ -80,6 +81,9 @@
     } else if (indexPath.row == 17) {
         JKReactivePauseSignalViewController* pauseSignalViewController = (JKReactivePauseSignalViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"pausesignal"];
         [self.navigationController pushViewController:pauseSignalViewController animated:YES];
+    } else if (indexPath.row == 19) {
+        InputValidationViewController* inputValidatorViewController = (InputValidationViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"inputvalidation"];
+        [self.navigationController pushViewController:inputValidatorViewController animated:YES];
     }
 }
 

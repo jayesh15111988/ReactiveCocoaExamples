@@ -155,4 +155,18 @@
     }];
 }
 
+-(void)handleButtonClickEvents {
+    //Say you have a button named myTestButton, you have to detect the click. Instead of adding redundant IBAction on it, you can easily simulate clikc using RACSignal events like below
+    UIButton* myTestButton = [UIButton new];
+    [[myTestButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton* testButton) {
+        NSLog(@"Test button %@ pressed", testButton);
+    }];
+    
+    //There is another way to handle button click as follows
+    myTestButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(UIButton* testButton) {
+        NSLog(@"Test button %@ pressed", testButton);
+        return [RACSignal empty];
+    }];
+}
+
 @end

@@ -73,8 +73,8 @@
 		382435AD1A8082BD009EB87A /* ImageUpdateDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUpdateDemoViewController.m; sourceTree = "<group>"; };
 		3824E8341A7EE93500362AC3 /* DemoHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoHomePageViewController.h; sourceTree = "<group>"; };
 		3824E8351A7EE93500362AC3 /* DemoHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoHomePageViewController.m; sourceTree = "<group>"; };
-		3824E8371A7EEAC300362AC3 /* InputValidationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputValidationViewController.h; sourceTree = "<group>"; };
-		3824E8381A7EEAC300362AC3 /* InputValidationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputValidationViewController.m; sourceTree = "<group>"; };
+		3824E8371A7EEAC300362AC3 /* InputValidationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputValidationViewController.h; path = JKReactiveDemos/InputValidationViewController.h; sourceTree = "<group>"; };
+		3824E8381A7EEAC300362AC3 /* InputValidationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputValidationViewController.m; path = JKReactiveDemos/InputValidationViewController.m; sourceTree = "<group>"; };
 		3824E83A1A7EEB2B00362AC3 /* JKReactiveDemos-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JKReactiveDemos-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		3824E83B1A7EF25700362AC3 /* NetworkOperationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkOperationViewController.h; sourceTree = "<group>"; };
 		3824E83C1A7EF25700362AC3 /* NetworkOperationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkOperationViewController.m; sourceTree = "<group>"; };
@@ -213,6 +213,8 @@
 				3897D60F1A982EFF001C201E /* JKReactivePauseSignalViewController.m */,
 				3897D6111A983D5E001C201E /* JKReactiveTimeoutDemoViewController.h */,
 				3897D6121A983D5E001C201E /* JKReactiveTimeoutDemoViewController.m */,
+				3824E8371A7EEAC300362AC3 /* InputValidationViewController.h */,
+				3824E8381A7EEAC300362AC3 /* InputValidationViewController.m */,
 			);
 			name = "Demo Controllers";
 			path = ..;
@@ -223,8 +225,6 @@
 			children = (
 				3824E8341A7EE93500362AC3 /* DemoHomePageViewController.h */,
 				3824E8351A7EE93500362AC3 /* DemoHomePageViewController.m */,
-				3824E8371A7EEAC300362AC3 /* InputValidationViewController.h */,
-				3824E8381A7EEAC300362AC3 /* InputValidationViewController.m */,
 				3824E83B1A7EF25700362AC3 /* NetworkOperationViewController.h */,
 				3824E83C1A7EF25700362AC3 /* NetworkOperationViewController.m */,
 				382435AC1A8082BD009EB87A /* ImageUpdateDemoViewController.h */,
