@@ -18,7 +18,6 @@
 #import "JKReactiveTimeoutDemoViewController.h"
 #import "InputValidationViewController.h"
 #import "ImageUpdateDemoViewController.h"
-#import "JKReactiveExecutingSignalViewController.h"
 
 @interface JKReactiveDemosLandingViewController ()
 @property (strong, nonatomic) IBOutlet UIView *footerView;
@@ -89,9 +88,8 @@
     } else if (indexPath.row == 22) {
         ImageUpdateDemoViewController* imageUpdateDemo = (ImageUpdateDemoViewController*) [self.storyboard instantiateViewControllerWithIdentifier:@"imagedemo"];
         [self.navigationController pushViewController:imageUpdateDemo animated:YES];
-    } else if (indexPath.row == 23) {
-        JKReactiveExecutingSignalViewController* executeSignalDemoViewController = (JKReactiveExecutingSignalViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"executesignal"];
-        [self.navigationController pushViewController:executeSignalDemoViewController animated:YES];
+    } else {
+    
     }
 }
 

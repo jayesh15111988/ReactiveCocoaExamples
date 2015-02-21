@@ -227,4 +227,41 @@
     }];
 }
 
+-(void)RACCommandExecutionStatusDemo {
+    //RACCommand execution
+    //Say you have a button to perform heavy network / background operation called beginHeavyOperationButton
+    UIButton* beginHeavyOperationButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 200, 40)];
+    beginHeavyOperationButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:@"Operation Continuing"];
+            [subscriber sendCompleted];
+            return nil;
+        }] replayLazily]; //Using replay lazily to make sure this block does not get executed unless there is any subscrober to this signal
+    }];
+    
+    //Order of execution is denoted as follows
+    
+    [beginHeavyOperationButton.rac_command.executing subscribeNext:^(id x) {
+        if([x boolValue]) {
+            //First
+            NSLog(@"Signal is executing.");
+        } else {
+            //Fourth
+            NSLog(@"Signal execution completed!");
+        }
+    }];
+    
+    [beginHeavyOperationButton.rac_command.executionSignals subscribeNext:^(RACSignal* signal) {
+        [signal subscribeNext:^(NSString* outputString) {
+            //outputString = @"Operation Continuing"
+            //Second
+            NSLog(@"Signal executing next block to which it is subscribed to");
+        }];
+        [signal subscribeCompleted:^{
+            //Third
+            NSLog(@"Finally Completed Execution of this Block");
+        }];
+    }];
+}
+
 @end
