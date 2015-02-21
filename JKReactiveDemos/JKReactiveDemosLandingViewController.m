@@ -14,6 +14,7 @@
 #import "JKReactiveButtonActionsViewController.h"
 #import "JKReactiveRacSequenceViewController.h"
 #import "JKReactiveRACSignalLifecycleViewController.h"
+#import "JKReactivePauseSignalViewController.h"
 
 @interface JKReactiveDemosLandingViewController ()
 @property (strong, nonatomic) IBOutlet UIView *footerView;
@@ -72,6 +73,9 @@
     } else if (indexPath.row == 10) {
         JKReactiveRACSignalLifecycleViewController* lifeCycleViewController = (JKReactiveRACSignalLifecycleViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"lifecycle"];
         [self.navigationController pushViewController:lifeCycleViewController animated:YES];
+    } else if (indexPath.row == 17) {
+        JKReactivePauseSignalViewController* pauseSignalViewController = (JKReactivePauseSignalViewController*) [self.demoScreensStoryboard instantiateViewControllerWithIdentifier:@"pausesignal"];
+        [self.navigationController pushViewController:pauseSignalViewController animated:YES];
     }
 }
 
