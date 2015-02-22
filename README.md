@@ -2,8 +2,8 @@
 
 #Reactive Cocoa Examples and Demo
 _Disclaimer - Reactive Cocoa is an open source framework which operates on the principles of functional reactive programming paradigm. This project is maintained on GitHub by open source community on [GitHub](https://github.com/ReactiveCocoa/ReactiveCocoa) page._
-Home Page : 
-Dynamic Download
+
+Home Page - Dynamic Download
 ![alt text][dynamicdownload]
 <br/><br/>
 Verify Input fields and activate register button
