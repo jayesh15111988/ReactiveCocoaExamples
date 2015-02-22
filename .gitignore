@@ -13,6 +13,7 @@ xcuserdata
 profile
 *.moved-aside
 DerivedData
+Podfile.lock
 .DS_Store
 *.psd
 *.ipa

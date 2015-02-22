@@ -95,7 +95,7 @@
 
 -(void)signalReplayDemo {
     
-    //We will have one signla and multiple subscribers in simple way. Replay is important as eliminating this parameter will give different signals for each subscribers subsequently
+    //We will have one signal and multiple subscribers in simple way. Replay is important as eliminating this parameter will give different signals for each subscribers subsequently
 
     RACSignal* signalWithMultipleSubscribers = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         //We will send same data to each and every future subscriber
