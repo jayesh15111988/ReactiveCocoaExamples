@@ -19,6 +19,7 @@
 #import "InputValidationViewController.h"
 #import "ImageUpdateDemoViewController.h"
 #import "DemoReactiveSearchBarViewController.h"
+#import "NetworkOperationViewController.h"
 
 //General enum for various option selections
 typedef NS_ENUM(NSInteger, GeneralOptionTypes) {
@@ -56,6 +57,12 @@ typedef NS_ENUM(NSInteger, GeneralOptionTypes) {
     self.reactiveDemosList = @[@"RACObserve with input textField mapped to Boolean Value", @"RACSignal with mapped input textField value", @"RACSignal with assigning input textField value to variable", @"Search Field with signal throttle and skip", @"Download operation with schedular", @"Combine Signals from multiple sources", @"Combine Signals with reduce", @"Assigning action to button using RACCommand", @"Executing command progress using indicator and rac_command along with completion block", @"rac_sequence Demo with Filter and Map functions", @"RACSignal lifecycle using subscribeNext and subscribeCompleted command", @"Simulate timeout with dummy Network request and RACDisposable object", @"Pause Signal - Add pause before next subscribeNext event. Subscribe next based on condition", @"Enable button based on input fields' validity", @"Update UI based on the dynamic change in internal variable values. (e.g. UIImage updates UIImageView)", @"UISearchBar Demo with text update detection"];
     [self.tableView reloadData];
     
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    //    NetworkOperationViewController* networkOperationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"networkoperation"];
+    //    [self presentViewController:networkOperationVC animated:YES completion:NULL];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

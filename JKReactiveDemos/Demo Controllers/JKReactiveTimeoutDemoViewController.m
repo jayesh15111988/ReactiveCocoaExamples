@@ -39,10 +39,11 @@
                 
                 //This loop will automatically stop if any error such as timeout occurred while processing signal and subsequent block
                 
-                for(NSInteger i = 0; (i< totalNumberOfObjects) && !disposableObject.isDisposed; i++) {
+                for(NSInteger i = 0; (i < 10) && !disposableObject.isDisposed; i++) {
                     self.requestOutput.text = [NSString stringWithFormat:@"Executing Sequence number %ld", i];
                     [subscriber sendNext:@(i + 1)];
-                    [NSThread sleepForTimeInterval:1.0];
+                    NSLog(@"Delay %f", [self.delayIntervalSimulate.text floatValue]);
+                    [NSThread sleepForTimeInterval:[self.delayIntervalSimulate.text floatValue]];
                 }
                 
                 //It will be disposed once timeout is detected. In that case completed block won't be executed

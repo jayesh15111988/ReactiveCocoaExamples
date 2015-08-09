@@ -23,7 +23,7 @@
     self.outputMessage.text = @"Please enter value in the search bar. It will be throttled and output after delay of 1 second";
     RACSignal* signalForSearchField = [[self.searchBarController rac_textSignal] throttle:THROTTLE_TIMEOUT];
     
-    [signalForSearchField subscribeNext:^(NSString* searchString) {
+    [[signalForSearchField switchToLatest] subscribeNext:^(NSString* searchString) {
         self.outputMessage.text = [NSString stringWithFormat:@"Value entered in the search bar is %@. Output after delay of 1 second", searchString];
     }];
 }

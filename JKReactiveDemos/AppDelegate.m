@@ -16,8 +16,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self sampleReactiveExamples];
     // Override point for customization after application launch.
     return YES;
+}
+
+- (void)sampleReactiveExamples {
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

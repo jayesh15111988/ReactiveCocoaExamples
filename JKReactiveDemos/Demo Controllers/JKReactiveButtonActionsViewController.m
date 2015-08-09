@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.activityIndicator startAnimating];
     if(self.optionSelected == ButtonPress) {
         self.title = @"Button Click RACCommand";
         RACCommand* command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
@@ -45,17 +45,16 @@
         self.title = @"Button Click Show Progress";
         
         self.defaultTopButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(UIButton* input) {
-            
             return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-                [subscriber sendNext:input];
-                [subscriber sendCompleted];
+                NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://7-themes.com/data_images/out/38/6898469-beautiful-sunny-leone-wallpaper.jpg"]];                   [subscriber sendNext:[UIImage imageWithData:data]];
+                    [subscriber sendCompleted];
                 return nil;
             }];
         }];
         
         @weakify(self);
         
-        [self.defaultTopButton.rac_command.executing subscribeNext:^(NSNumber* executing) {
+        [self.defaultTopButton.rac_command.executing subscribeNext:^(id executing) {
             @strongify(self);
             
             if([executing boolValue]) {
@@ -66,17 +65,19 @@
                 self.defaultTopButton.userInteractionEnabled = self.defaultTopButton.enabled;
             }
             else {
-                double delayInSeconds = 4.0;
-                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                    [self.activityIndicator stopAnimating];
-                    self.resultLabel.text = @"Execution Signal Finished";
-                    self.defaultTopButton.enabled = YES;
-                    self.defaultTopButton.alpha = 1.0;
-                    self.defaultTopButton.userInteractionEnabled = self.defaultTopButton.enabled;
-                });
+                [self.activityIndicator stopAnimating];
+                self.resultLabel.text = @"Execution Signal Finished";
+                self.defaultTopButton.enabled = YES;
+                self.defaultTopButton.alpha = 1.0;
+                self.defaultTopButton.userInteractionEnabled = self.defaultTopButton.enabled;
             }
         }];
+        [self.defaultTopButton.rac_command.executionSignals subscribeNext:^(RACSignal* buttonPressOperationSignal) {
+            [buttonPressOperationSignal subscribeNext:^(id x) {
+                NSLog(@"Operation Completed");
+            }];
+        }];
+
     }
 }
 

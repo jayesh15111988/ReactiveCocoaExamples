@@ -26,70 +26,22 @@
                     initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASE_URL, API_EXTENSION]]];
     self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
     self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    self.manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", nil];
     
-    
-    RACSignal* networkOperationSignal = [self getNetworkData];
-    
-    [networkOperationSignal subscribeNext:^(RACTuple* tuple) {
-        NSArray* collectionOfAirlines = tuple[1][@"airlines"];
-        RACSignal* signalWithAirlinesCollection = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-            [subscriber sendNext:collectionOfAirlines];
-            [subscriber sendCompleted];
-            return nil;
-        }];
+    [[[[self getNetworkDataWithEndpoint:@"test1.php"] flattenMap:^RACStream *(RACTuple* value) {
+        return [self getNetworkDataWithEndpoint:value[1][@"next"]];
+    }] flattenMap:^RACStream *(RACTuple* value) {
+        return [self getNetworkDataWithEndpoint:value[1][@"next"]];
+    }] subscribeNext:^(RACTuple* value) {
+        NSLog(@"Value received from server %@", value[1]);
+    } error:^(NSError *error) {
         
-        RACSignal* signalWithModelsConversion = [self convertdictionaryToModels:signalWithAirlinesCollection];
-        
-        [signalWithModelsConversion subscribeNext:^(NSArray* airlinesCollection) {
-            NSLog(@"Total objects %lu",(unsigned long)[airlinesCollection count]);
-        }];
-        
-        [signalWithModelsConversion subscribeError:^(NSError *error) {
-            NSLog(@"Error %@ Occurred",[error localizedDescription]);
-        } completed:^{
-            NSLog(@"Network data import and models creation operation finished");
-        }];
-    }];
-    
-
-    NSString* temp = @"Reactive Cocoa is so confusing";
-    
-    self.networkOpearationButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        return [RACSignal empty];
-    }];
-    
-    
-    temp = @"ReactiveCocoa is straightforward";
-    
-    //Twenty third demo
-    [[self.networkOpearationButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-    }];
-    
-}
-
--(RACSignal*)convertdictionaryToModels:(RACSignal*)dictSignal {
-    return [dictSignal map:^id(NSArray* dictCollection) {
-      
-        NSMutableArray* modelsCollection = [NSMutableArray new];
-        
-        for(NSDictionary* individualDict in dictCollection) {
-            Airline* airlineModel = [Airline new];
-            airlineModel.name = individualDict[@"name"];
-            airlineModel.iata = individualDict[@"iata"];
-            airlineModel.isActive = [individualDict[@"active"] boolValue];
-            [modelsCollection addObject:airlineModel];
-        }
-        
-        return [modelsCollection copy];
     }];
 }
 
--(RACSignal*)getNetworkData {
-    RACSignal* networkOperationSignal = [self.manager rac_GET:@"airlines/rest/v1/json/all" parameters:@{@"appId" : APP_ID,
-                                                                                                        @"appKey" : APP_KEY}];
+-(RACSignal*)getNetworkDataWithEndpoint:(NSString*)endPoint {
+    RACSignal* networkOperationSignal = [self.manager rac_GET:[NSString stringWithFormat:@"%@/%@",BASE_URL_SHORT, endPoint] parameters:nil];
     return networkOperationSignal;
 }
-
-
 
 @end

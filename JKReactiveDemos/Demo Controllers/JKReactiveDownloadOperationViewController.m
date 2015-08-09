@@ -57,9 +57,17 @@
                 self.currentOperationStatusString = @"URL Link should be at least 10 characters in length";
         }
     } else {
-            self.currentOperationStatusString = @"Image from this URL already downloaded. Did to redownload image";
+            self.currentOperationStatusString = @"Image from this URL already downloaded";
     }
         return [RACSignal empty];
+    }];
+    
+    [self.downloadButtonImage.rac_command.executing subscribeNext:^(NSNumber* executing) {
+        if ([executing boolValue]) {
+            NSLog(@"Executing");
+        } else {
+            NSLog(@"Finished Execution");
+        }
     }];
 }
 

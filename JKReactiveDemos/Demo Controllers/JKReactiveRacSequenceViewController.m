@@ -31,11 +31,11 @@
             self.inputFilterLength.text = @"0";
         }
         
-        filteredArray = [[self.inputArray.rac_sequence filter:^BOOL(NSString* value) {
+        filteredArray = [[[self.inputArray.rac_sequence filter:^BOOL(NSString* value) {
             return (value.length > [self.inputFilterLength.text integerValue]);
         }] map:^id(NSString* value) {
             return [value stringByAppendingString:self.textToAppend.text];
-        }].array;
+        }] array];
         self.operationOutput.text = [NSString stringWithFormat:@"Filtered Input array is : %@", [filteredArray componentsJoinedByString:@", "]];
     }];
 }

@@ -140,7 +140,7 @@
 }
 
 -(void)deferSignalWithActionSheet {
-    //Defer means the block inside won't get executed unless it has at least one
+    //Defer means the block inside won't get executed unless it has at least one subscriber
     RACSignal* deferSignal = [RACSignal defer:^RACSignal *{
         UIActionSheet* sheet = [UIActionSheet new];
         [sheet addButtonWithTitle:@"Steve Jobs"];

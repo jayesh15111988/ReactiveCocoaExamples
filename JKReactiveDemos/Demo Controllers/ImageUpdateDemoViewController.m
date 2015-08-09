@@ -46,7 +46,6 @@
             [self.activityIndicatorFirstImage stopAnimating];
             self.firstImage = image;
         }];
-        
         return [RACSignal empty];
     }];
     
