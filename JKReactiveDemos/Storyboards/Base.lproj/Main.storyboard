@@ -573,5 +573,54 @@
             </objects>
             <point key="canvasLocation" x="832" y="389"/>
         </scene>
+        <!--Reactive All Miscelleneous Examples View Controller-->
+        <scene sceneID="99Q-Uo-HnN">
+            <objects>
+                <viewController storyboardIdentifier="allMiscelleneuous" id="Uxe-ik-A9h" customClass="JKReactiveAllMiscelleneousExamplesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KWx-PA-PgI"/>
+                        <viewControllerLayoutGuide type="bottom" id="aAd-35-3gx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lFR-K2-5Bj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMA-9t-0QN">
+                                <rect key="frame" x="20" y="64" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9n4-sh-3pl"/>
+                                    <constraint firstAttribute="width" constant="120" id="ih7-KI-s4z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H4Y-4V-ca7">
+                                <rect key="frame" x="180" y="64" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Dqz-Ro-FYf"/>
+                                    <constraint firstAttribute="width" constant="120" id="F1U-OW-Fly"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tMA-9t-0QN" firstAttribute="top" secondItem="KWx-PA-PgI" secondAttribute="bottom" constant="44" id="AxR-69-Rqn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H4Y-4V-ca7" secondAttribute="trailing" constant="4" id="WPB-zl-aIA"/>
+                            <constraint firstItem="tMA-9t-0QN" firstAttribute="leading" secondItem="lFR-K2-5Bj" secondAttribute="leadingMargin" constant="4" id="lQJ-ZM-72C"/>
+                            <constraint firstItem="H4Y-4V-ca7" firstAttribute="top" secondItem="KWx-PA-PgI" secondAttribute="bottom" constant="44" id="tPX-78-ijn"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="textField1" destination="tMA-9t-0QN" id="wcw-Td-dYh"/>
+                        <outlet property="textField2" destination="H4Y-4V-ca7" id="2m1-T4-bbZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="var-4L-v7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3518" y="-624"/>
+        </scene>
     </scenes>
 </document>

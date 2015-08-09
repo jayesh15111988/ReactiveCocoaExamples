@@ -20,6 +20,7 @@
 #import "ImageUpdateDemoViewController.h"
 #import "DemoReactiveSearchBarViewController.h"
 #import "NetworkOperationViewController.h"
+#import "JKReactiveAllMiscelleneousExamplesViewController.h"
 
 //General enum for various option selections
 typedef NS_ENUM(NSInteger, GeneralOptionTypes) {
@@ -31,16 +32,18 @@ typedef NS_ENUM(NSInteger, GeneralOptionTypes) {
     ReactivePauseDemo = 12,
     ReactiveInputValidationDemo = 13,
     ReactiveImageUpdateDemo = 14,
-    ReactiveSearchBarDemo = 15
+    ReactiveSearchBarDemo = 15,
+    ReactiveAllMiscellenousExamples = 16
 };
 
-
 @interface JKReactiveDemosLandingViewController ()
+
 @property (strong, nonatomic) IBOutlet UIView *footerView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray* reactiveDemosList;
 @property (strong, nonatomic) UIStoryboard* demoScreensStoryboard;
 @property (strong, nonatomic) UIFont* defaultFontType;
+
 @end
 
 @implementation JKReactiveDemosLandingViewController
@@ -54,7 +57,7 @@ typedef NS_ENUM(NSInteger, GeneralOptionTypes) {
     self.defaultFontType = [UIFont fontWithName:@"HelveticaNeue-Light" size:15.0];
     
     self.title = @"Reactive Cocoa Demo";
-    self.reactiveDemosList = @[@"RACObserve with input textField mapped to Boolean Value", @"RACSignal with mapped input textField value", @"RACSignal with assigning input textField value to variable", @"Search Field with signal throttle and skip", @"Download operation with schedular", @"Combine Signals from multiple sources", @"Combine Signals with reduce", @"Assigning action to button using RACCommand", @"Executing command progress using indicator and rac_command along with completion block", @"rac_sequence Demo with Filter and Map functions", @"RACSignal lifecycle using subscribeNext and subscribeCompleted command", @"Simulate timeout with dummy Network request and RACDisposable object", @"Pause Signal - Add pause before next subscribeNext event. Subscribe next based on condition", @"Enable button based on input fields' validity", @"Update UI based on the dynamic change in internal variable values. (e.g. UIImage updates UIImageView)", @"UISearchBar Demo with text update detection"];
+    self.reactiveDemosList = @[@"RACObserve with input textField mapped to Boolean Value", @"RACSignal with mapped input textField value", @"RACSignal with assigning input textField value to variable", @"Search Field with signal throttle and skip", @"Download operation with schedular", @"Combine Signals from multiple sources", @"Combine Signals with reduce", @"Assigning action to button using RACCommand", @"Executing command progress using indicator and rac_command along with completion block", @"rac_sequence Demo with Filter and Map functions", @"RACSignal lifecycle using subscribeNext and subscribeCompleted command", @"Simulate timeout with dummy Network request and RACDisposable object", @"Pause Signal - Add pause before next subscribeNext event. Subscribe next based on condition", @"Enable button based on input fields' validity", @"Update UI based on the dynamic change in internal variable values. (e.g. UIImage updates UIImageView)", @"UISearchBar Demo with text update detection", @"All miscelleneous examples"];
     [self.tableView reloadData];
     
 }
@@ -118,6 +121,9 @@ typedef NS_ENUM(NSInteger, GeneralOptionTypes) {
     } else if(indexPath.row == ReactiveSearchBarDemo){
         DemoReactiveSearchBarViewController* reactiveSearchViewController = (DemoReactiveSearchBarViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"reactivesearch"];
         [self.navigationController pushViewController:reactiveSearchViewController animated:YES];
+    } else if (indexPath.row == ReactiveAllMiscellenousExamples) {
+        JKReactiveAllMiscelleneousExamplesViewController* allMiscelleneousExamples = [self.storyboard instantiateViewControllerWithIdentifier:@"allMiscelleneuous"];
+        [self.navigationController pushViewController:allMiscelleneousExamples animated:YES];
     }
 }
 

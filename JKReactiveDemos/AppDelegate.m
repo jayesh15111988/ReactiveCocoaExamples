@@ -22,7 +22,24 @@
 }
 
 - (void)sampleReactiveExamples {
+    RACSubject* letters = [RACSubject subject];
+    RACSignal* lettersSignal = [letters replayLast];
     
+    //Already create an action to take when signal is subscribed to this action
+    [lettersSignal subscribeNext:^(NSString* inputString) {
+        NSLog(@"\n This is Microsoft Arena %@",inputString);
+    }];
+    
+    
+    [letters sendNext:@"C Sharp"];
+    [letters sendNext:@"Windows"];
+    
+    [lettersSignal subscribeNext:^(NSString* inputString) {
+        NSLog(@"This is Apple Arena %@",inputString);
+    }];
+    
+    [letters sendNext:@"iOS"];
+    [letters sendNext:@"Objective-C"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

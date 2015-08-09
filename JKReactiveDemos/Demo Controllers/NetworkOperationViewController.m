@@ -37,6 +37,22 @@
     } error:^(NSError *error) {
         
     }];
+    
+    [self concatOperation];
+}
+
+- (void)concatOperation {
+    RACSignal* first = [self getNetworkDataWithEndpoint:@"test1.php"];
+    RACSignal* second = [self getNetworkDataWithEndpoint:@"test2.php"];
+    RACSignal* third = [self getNetworkDataWithEndpoint:@"test3.php"];
+
+    NSArray* signals = @[first, second, third];
+    [[RACSignal concat:signals] subscribeNext:^(id x) {
+        // This block will be executed for each and every signal associated here.
+    } completed:^{
+        // This block will be executed only once after all serial operations are complete.
+    }];
+   
 }
 
 -(RACSignal*)getNetworkDataWithEndpoint:(NSString*)endPoint {
